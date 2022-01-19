@@ -9,10 +9,11 @@
         {{ end }}
     {{ end }}
 {{ end }}
+{{ $content := false }}
 {{ with .Resources.GetMatch "dojocho.txt"}}
     {{ if .Content }}
-    {{ $content := .Content }}
-    <div class="container dojocho mt-4 roundoff">
+    {{ $content = .Content }}
+    <div class="container shadow mt-4 roundoff dojocho">
         <div class="row">
             <div class="col">
                 <h1 class="dojocho text-center text-md-start">From the Dojo Cho</h1>
@@ -25,7 +26,7 @@
                 </div>
             </div>
             <div class="col col-md-9">
-                <img style="margin-right: 1rem; margin-bottom: 1rem;" class="dojocho roundoff float-start d-md-none mt-4" src="{{ $dcimg }}" alt="Dojo Cho">
+                <img align=""class="dojocho roundoff float-start d-md-none mt-4 me-2 mb-2" src="{{ $dcimg }}" alt="Dojo Cho">
                 <div class="dojocho content text-start mt-4 mt-md-0">
                 {{ $content | markdownify }}
                 </div>
@@ -37,12 +38,142 @@
     </div>
     {{ end }}
 {{ end }}
-
-{{ partial "divider" . }}
+{{ if $content }}
+    {{ partial "social" . }}
+    {{ partialCached "divider" . }}
+{{ end }}
 
 <div class="container">
-    <h2 class="display-4 text-center">Main body goes here</h2>
-    {{ .Content }}
+    <div class="row align-items-center">
+        <div class="col col-2 col-md-1">
+            <img style="width: 100%" src="/image/aikido-kanji.png.webp" alt="Aikido Kanji">
+        </div>
+        <div class="col">
+            <h2><a href="https://aikidojournal.com/2020/04/06/a-world-prayer-from-the-aikido-community/">A World Prayer from the Aikido Community</a></h2>
+            at The Aikido Journal / <a href="https://aikidojournal.com/">aikidojournal.com</a>
+        </div>
+    </div>
 </div>
+
+{{ partialCached "divider" . }}
+
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col col-12 col-md-8">
+            <h1>North Texas Aikido</h1>
+            <h3>Russell Alvey Sensei <span class="subheader text-lowercase text-end text-small">dojo cho</span></h3>
+            <div class="text-small">rokudan (6th dan) aikikai</div>
+        </div>
+        <div class="col mt-4 mt-md-0">
+            <img class="roundoff" style="width: 100%" src="russell-alvey-hi-res-300x168.jpg.webp" alt="Russ Alvey Sensei">
+        </div>
+    </div>
+</div>
+
+
+{{ $watermark := .Resources.GetMatch "watermark.webp" }}
+{{ if $watermark }}
+<style>
+    .watermark {
+        background-image: url($watermark);
+    }
+</style>
+{{ end }}
+
+<div class="container mt-4 pt-4 watermark">
+    <div class="row align-items-center">
+        <div class="col col-12 col-md-6">
+            <div class="row row-cols-4 row-cols-md-2 g-2">
+                <div class="col"><img style="width:100%" class="roundoff-reversed" data-shuffle src="/image/1x1.jpg" alt="NTA Image"></div>
+                <div class="col"><img style="width:100%" class="roundoff" data-shuffle src="/image/1x1.jpg" alt="NTA Image"></div>
+                <div class="col"><img style="width:100%" class="roundoff" data-shuffle src="/image/1x1.jpg" alt="NTA Image"></div>
+                <div class="col"><img style="width:100%" class="roundoff-reversed" data-shuffle src="/image/1x1.jpg" alt="NTA Image"></div>
+            </div>
+        </div>
+        <div class="col fs-2 mt-4 mt-md-0">
+            Join us to practice aikido in peaceful surroundings near the shores of Lake Lavon.
+        </div>
+    </div>
+
+    <!-- Content from index.md -->
+    <div class="row mt-4 pt-md-4">
+        <div class="col">
+            {{ .Content }}
+        </div>
+    </div>
+    
+</div>
+
+{{ partialCached "social" . }}
+
+<div class="container mt-4">
+    <div class="row align-items-center">
+        <div class="col">
+            <figure class="text-center text-md-end">
+                <blockquote class="blockquote fs-3">
+                    <p class="text-serif">Progress comes to those who train and train; reliance on secret techniques will get you nowhere.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Morihei Ueshiba, <cite title="Source Title">O-Sensei</cite>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col col-12 col-md-6">
+            <div class="row row-cols-4 row-cols-md-2 g-2">
+                <div class="col"><img style="width:100%" class="roundoff-reversed" data-shuffle src="/image/1x1.jpg" alt="NTA Image"></div>
+                <div class="col"><img style="width:100%" class="roundoff" data-shuffle src="/image/1x1.jpg" alt="NTA Image"></div>
+                <div class="col"><img style="width:100%" class="roundoff" data-shuffle src="/image/1x1.jpg" alt="NTA Image"></div>
+                <div class="col"><img style="width:100%" class="roundoff-reversed" data-shuffle src="/image/1x1.jpg" alt="NTA Image"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ partial "pandemic" . }}
+
+
+{{ $midpage := .Resources.GetMatch "midpage.webp" }}
+{{ if $midpage }}
+<style>
+    #midpage {
+        background-image: url({{$midpage}});
+    }
+</style>
+{{ end }}
+<div id="midpage" class="container-fluid mt-4">
+    <div class="text-white p-2 rounded">
+           Iwama Style Aikido is the style of aikido that was taught at the Iwama dojo by the founder of Aikido, Morihei Ueshiba, the lineage of which passed on through Morihiro Saito Shihan, a close student of O-Sensei, who was given responsibility over the Iwama dojo after O-Sensei's death.
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col col-12 col-md-9">
+            <h2>Directions</h2>
+            <p class="lead">
+                North Texas Aikido is located on the shores of Lake Lavon between Lucas and Culleoka on East Lucas Road (FM 3286), 8.5 miles east of Central Expressway (I-75).
+            </p>
+            <h3>From Plano/Allen</h3>
+            <p>
+            From North Central Expressway (I-75), head east on Bethany Road towards Lucas. Continue east as Bethany turns into West Lucas Road (County Road 263). At the intersection of West Lucas Road, East Lucas Road, and Southview Drive (look for the Lucas Foods "BAIT SANDWICHES" store) turn left and head east on East Lucas Road (FM 3286). After you cross the first bridge over Lake Lavon, our driveway is 1/4 mile on your right.
+            </p>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col col-12">
+                    <div class="ratio ratio-1x1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3342.6074842019407!2d-96.54345424853935!3d33.09310968078371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c10b9cdff66c5%3A0x7e161217af344282!2sNorth+Texas+Aikido!5e0!3m2!1sen!2sus!4v1537396080273" width="960" height="540" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    </div></div>
+                <div class="col col-12 mt-4">
+                    <img style="width: 100%" class="rounded" src="nta-driveway.jpg" alt="NTA Driveway">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ partialCached "divider" . }}
+
+{{ partial "twitterfeed" . }}
 
 {{ end }}

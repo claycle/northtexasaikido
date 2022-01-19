@@ -1,0 +1,4 @@
+{{ $imgs := resources.Get "shuffle/*.jpg" }}
+{{ range $imgs }}
+    {{ .RelPermaLink }}
+{{ end }}

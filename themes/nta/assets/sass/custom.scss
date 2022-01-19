@@ -8,6 +8,14 @@ a:hover {
     transition: color 0.5s;
 }
 
+a.gold {
+    color: $nta-heather;
+}
+
+a.gold:hover {
+    color: darken($nta-heather, $link-shade-percentage);
+}
+
 // Header Styles
 h1,
 h2,
@@ -24,6 +32,40 @@ h4,
 h5,
 h6 {
     letter-spacing: 0.25rem;
+}
+
+.subheader {
+    font-family: $font-family-sans-serif;
+    text-transform: lowercase;
+    color: rgba($headings-color, 0.5);
+}
+// Text styles
+.text-small {
+    font-size: 0.8rem;
+}
+
+.text-smaller {
+    font-size: 0.6rem;
+}
+
+.text-smallest {
+    font-size: 0.4rem;
+}
+
+.text-serif {
+    font-family: $font-family-serif;
+}
+
+.text-spacing-25 {
+    letter-spacing: 0.25rem;
+}
+
+.text-spacing-50 {
+    letter-spacing: 0.5rem;
+}
+
+.text-spacing-100 {
+    letter-spacing: 1rem;
 }
 
 // Rounded styles
@@ -55,6 +97,10 @@ h6 {
 
 
 // Navbar Styles
+.navbar {
+    //box-shadow: 0px 0px 8px 4px rgba($nta-dark-blue, 0.75);    
+}
+
 .navbar.bg-dark {
     background-color: $nta-dark-blue !important;
 }
@@ -86,7 +132,7 @@ a.navbar-brand:hover {
 #cover {
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-position: center;
 }
@@ -132,7 +178,6 @@ a.navbar-brand:hover {
 // On not-small screens, 21x9
 @include media-breakpoint-up(md) {
     #cover {
-        width: 100vw;
         height: 42.857143vw;
     }
 
@@ -153,8 +198,8 @@ a.navbar-brand:hover {
 // Dojo Cho Message
 
 div.container.dojocho {
-    //background: rgba($nta-dark-blue, 0.1);
-    background-color: rgba($nta-blue, 0.25);
+    background-color: rgba($nta-blue, 0.1);
+    //background-color: lighten($nta-blue, 70);
     padding: 1rem;
 }
 
@@ -173,7 +218,7 @@ div.dojocho.content {
     }
 }
 
-// Divider
+// Divider, from https://codepen.io/airen/details/MWWOmEM
 div.divider {
     color: $nta-dark-brown;
     display: flex;
@@ -206,3 +251,69 @@ div.divider>img {
     height: 40px;
     width: auto;
 }
+
+// Watermark
+div.watermark {
+    background-image: url("/image/aikido-kanji-10a.png.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+}
+div.watermark.left {
+    background-position: top left;
+}
+
+// Midpage Banner
+#midpage {
+    background-image: url(https://picsum.photos/1050/450);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vw;  // Make a square on small;
+    background-position: center;
+    background-size: cover;
+}
+
+#midpage > div {
+    background-color: rgba($nta-dark-blue, 0.5);
+    width: 90%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+}
+
+@include media-breakpoint-up(md) {
+    #midpage {
+        height: 42.85714286vw;
+    }
+    #midpage > div {
+        width: 40%;
+        left: 25%;
+        top: 75%;
+    }
+}
+
+footer.bg-dark {
+    background-color: $nta-blue !important;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+.bg-darker {
+    background-color: $nta-dark-blue;
+}
+
+.crafted > a {
+    color: darken($white, 25);
+    transition: shadow 0.5s, color 0.5s;
+}
+
+.crafted > a:hover {
+    color: $white;
+    text-shadow: 0px 0px 2px $white;
+    transition: shadow 0.5s, color 0.5s;
+} 

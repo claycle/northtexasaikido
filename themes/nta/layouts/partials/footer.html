@@ -1,15 +1,49 @@
-<footer class="footer fixed-bottom bg-dark">
-
-    <div class="row footer-text">
-      <div class="col-12 col-md text-center text-md-left nav-link text-white">
-        {{.Param "copyright" | markdownify}}
-      </div>
+<footer class="footer bg-dark mt-4">
+    <div class="container-fluid">
+        <div class="row footer-text pt-2 row-cols-1 row-cols-md-2 ps-2 pe-2">
+            <div class="col text-center text-md-start text-white">
+                <h3 class="text-white">North Texas Aikido</h3>
+                <p>
+                    Classes every Tuesday thru Sunday<br />
+                    Closed Monday
+                </p>
+                <p>
+                    Visitors are always welcome to observe an Aikido class.
+                </p>
+            </div>
+            <div class="col text-center text-md-end">
+                <img class="footer-logo" src="{{ .Param "logo" }}" alt="North Texas Aikido Logo">
+                <p class="text-white mt-2">
+                    2150 East Lucas Road<br/>
+                    Allen TX 75002<br/>
+                    <a class="gold" href="#" data-secret="dGVsOjk3MjM5MDk2MDA=">972.390.9600</a>
+                </p>
+            </div>
+        </div>
     </div>
-
-  <!-- JavaScript and dependencies -->
-
-  {{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
-  {{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
-
-  <script src="{{$js.RelPermalink}}" defer></script>
+    <div class="container-fluid g-0 bg-darker">
+        <div class="row footer-text pt-2">
+            <div class="col text-center text-white text-small">
+                {{.Param "copyright" | markdownify}}
+            </div>
+        </div>
+        <div class="row footer-text pb-2">
+            <div class="col text-center text-white text-smaller">
+                {{ $email := .Param "crafted_email_url" | base64Encode }}
+                <span class="crafted text-spacing-25 text-lowercase"><a href="#" data-secret="{{$email}}">crafted by claycle</a></span>
+            </div>
+        </div>
+    </div>
 </footer>
+
+<!-- JavaScript and dependencies -->
+
+{{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
+{{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
+<script src="{{$js.RelPermalink}}" defer></script>
+
+{{ $js := resources.Get "js/shuffle.js" | js.Build}}
+<script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>
+
+{{ $js := resources.Get "js/secret.js" | js.Build}}
+<script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>

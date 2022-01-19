@@ -13,7 +13,8 @@ sans-serif,
 "Segoe UI Symbol",
 "Noto Color Emoji" !default;
 
-$font-family-serif: 'Libre Baskerville', serif;
+//$font-family-serif: 'Libre Baskerville', serif;
+$font-family-serif: 'Cardo', serif;
 $headings-font-family: $font-family-serif;
 
 $nta-blue: rgb(28, 45, 82);
@@ -28,10 +29,10 @@ $nta-heather: rgb(200, 203, 163);
 $nta-light-blue: lighten($nta-blue, 20);
 
 //$body-bg: rgb(141, 99, 70, 0.2);
-$body-bg: $nta-brown-trans;
+$body-bg: rgba($nta-heather, 0.2);
 $body-color: $nta-dark-brown;
 
 $primary: lighten($nta-blue, 30);
 $link-shade-percentage: 30;
 
-$headings-color: $nta-light-blue;
+$headings-color: $nta-blue;

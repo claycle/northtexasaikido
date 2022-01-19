@@ -1,0 +1,9 @@
+<div class="container shadow mt-4 dojocho roundoff-reversed">
+    <div class="row">
+        <div class="col">
+        {{ with .Resources.GetMatch "pandemic.txt"}}
+        {{ .Content | markdownify }}
+        {{ end }}
+        </div>
+    </div>
+</div>
