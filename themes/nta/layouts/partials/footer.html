@@ -1,8 +1,9 @@
-<footer class="footer bg-dark mt-4">
-    <div class="container-fluid">
+<footer>
+
+    <div class="container-fluid bg-nta-blue">
         <div class="row footer-text pt-2 row-cols-1 row-cols-md-2 ps-2 pe-2">
             <div class="col text-center text-md-start text-white">
-                <h3 class="text-white">North Texas Aikido</h3>
+                <h2 class="text-white">{{ $.Site.Title }}</h2>
                 <p>
                     Classes every Tuesday thru Sunday<br />
                     Closed Monday
@@ -14,17 +15,18 @@
             <div class="col text-center text-md-end">
                 <img class="footer-logo" src="{{ .Param "logo" }}" alt="North Texas Aikido Logo">
                 <p class="text-white mt-2">
-                    2150 East Lucas Road<br/>
-                    Allen TX 75002<br/>
+                    2150 East Lucas Road<br />
+                    Allen TX 75002<br />
                     <a class="gold" href="#" data-secret="dGVsOjk3MjM5MDk2MDA=">972.390.9600</a>
                 </p>
             </div>
         </div>
     </div>
-    <div class="container-fluid g-0 bg-darker">
+
+    <div class="container-fluid bg-darker">
         <div class="row footer-text pt-2">
             <div class="col text-center text-white text-small">
-                {{.Param "copyright" | markdownify}}
+                {{.Param "copyright" | markdownify}} - <a href="{{ "contact" | relURL }}">Contact</a>
             </div>
         </div>
         <div class="row footer-text pb-2">
@@ -34,6 +36,7 @@
             </div>
         </div>
     </div>
+    
 </footer>
 
 <!-- JavaScript and dependencies -->

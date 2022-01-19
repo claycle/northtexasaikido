@@ -154,8 +154,7 @@ a.navbar-brand:hover {
     bottom: 20%;
     transform: translate(-50%, 0);
     text-align: center;
-    background: $white;
-    background: linear-gradient(90deg, rgba($nta-brown, 0) 0%, rgba($nta-brown, 1) 50%, rgba($nta-brown, 0) 100%);
+    background: linear-gradient(90deg, rgba($nta-dark-brown, 0) 0%, rgba($nta-dark-brown, 1) 50%, rgba($nta-dark-brown, 0) 100%);
 }
 
 #covertitle>h1 {
@@ -184,14 +183,21 @@ a.navbar-brand:hover {
     #covermon {
         width: 20vw;
         top: 5%;
+        left: 15%;
         transform: translate(-50%, 0);
     }
 
     #covertitle {
-        width: 90vw;
+        width: 100%;
         bottom: initial;
         top: 30vw;
         transform: translate(-50%, 0%);
+        text-align: right;
+        background: linear-gradient(90deg, rgba($nta-dark-brown, 0) 25%, rgba($nta-dark-brown, 0.75) 50%);
+        padding-right: 4rem;
+    }
+    #coversubtitle {
+        padding-right: 2rem;
     }
 }
 
@@ -316,4 +322,8 @@ footer.bg-dark {
     color: $white;
     text-shadow: 0px 0px 2px $white;
     transition: shadow 0.5s, color 0.5s;
-} 
+}
+
+.bg-nta-blue {
+    background-color: $nta-blue;
+}

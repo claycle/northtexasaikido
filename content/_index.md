@@ -3,12 +3,6 @@ title: "Home"
 alttitle: "North Texas Aikido"
 subtitle: Aikido on the Texas Prairie
 draft: false
-menu:
-    main:
-        identifier: "home"
-        name: "Home!"
-        weight: 100
-        parent: ""
 showmon: true
 ---
 For over 30 years, North Texas Aikido has served the community with Iwama-Style Aikido in a safe, friendly atmosphere that fosters learning and development at a pace tailored to each individual student.
