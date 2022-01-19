@@ -1,0 +1,33 @@
+{{ $img := .Resources.GetMatch "cover.*" }}
+<style>
+    #cover {
+        background-image: url({{- if $img }}
+        {{- $img -}}
+        {{ else }}
+        {{- $.Param "cover" -}}
+        {{ end -}});
+    }
+</style>
+{{ $mon := $.Param "showmon" }}
+{{ $title := $.Param "alttitle" }}
+{{ if not $title }}
+{{ $title = .Title }}
+{{ end }}
+{{ $subtitle := $.Param "subtitle"}}
+<header>
+    <div id="cover" class="container-fluid g-0">
+        {{ if $mon }}
+        <div id="covermon">
+            <img src="{{ $.Param "logo" }}" alt="North Texas Aikido">
+        </div>
+        {{ end }}
+        <div id="covertitle">
+            <h1>{{ $title }}</h1>
+            {{ if $subtitle }}
+            <div id="coversubtitle">
+                {{ $subtitle }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</header>

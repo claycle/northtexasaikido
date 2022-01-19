@@ -1,0 +1,9 @@
+BaseURL: 'https://northtexasaikido.com'
+languageCode: en-us
+title: North Texas Aikido
+theme: nta
+relativeURLS: true
+module:
+  mounts:
+    - source: node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
+      target: assets/js/bootstrap.bundle.min.js
