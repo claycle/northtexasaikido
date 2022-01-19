@@ -1,3 +1,4 @@
+{{ if not .Params.nocover }}
 {{ $img := .Resources.GetMatch "cover.*" }}
 <style>
     #cover {
@@ -15,7 +16,8 @@
 {{ end }}
 {{ $subtitle := $.Param "subtitle"}}
 <header>
-<div id="cover" xclass="container g-0">
+
+<div id="cover">
     {{ if $mon }}
     <div id="covermon">
         <img src="{{ $.Param "logo" }}" alt="North Texas Aikido">
@@ -30,4 +32,5 @@
         {{ end }}
     </div>
 </div>
+{{ end }}
 </header>

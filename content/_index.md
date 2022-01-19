@@ -1,6 +1,7 @@
 ---
 title: "Home"
 alttitle: "North Texas Aikido"
+smallhero: true
 subtitle: Aikido on the Texas Prairie
 draft: false
 showmon: true

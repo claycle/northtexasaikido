@@ -97,6 +97,24 @@ h6 {
 
 
 // Navbar Styles
+
+/* For nav bar effects */
+.stucky {
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 0px 8px 4px rgba($nta-dark-blue, 0.75);   
+    //border-bottom: 1px solid $nta-dark-brown;
+    //background-color: rgba($nta-dark-brown, 0.9);
+    transition: box-shadow 0.5s ease-out;
+}
+
+.unstucky {
+    box-shadow: none;
+    //border-bottom: none;
+    //background-color: rgba($nta-dark-brown, 1);
+    transition: box-shadow 0.5s ease-out;
+}
+
+
 .navbar {
     //box-shadow: 0px 0px 8px 4px rgba($nta-dark-blue, 0.75);    
 }

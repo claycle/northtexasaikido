@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav id="thenavbar" aria-describedby=""class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
         
         <a class="navbar-brand" href="{{ .Site.Home.Permalink }}">
@@ -41,3 +41,6 @@
         </div>
     </div>
 </nav>
+
+{{ $js := resources.Get "js/navbar.js" | js.Build}}
+<script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>
