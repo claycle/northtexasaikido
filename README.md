@@ -1,4 +1,4 @@
-# North Texas Aikido Site Update
+# North Texas Aikido
 
 Current Version: 0.1a (alpha) / 2020
 
