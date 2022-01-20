@@ -1,4 +1,11 @@
 [[main]]
+identifier = "home"
+name = "Home"
+weight = -100
+parent = ""
+url = "/"
+
+[[main]]
 identifier = "directions"
 name = "Directions"
 weight = 100

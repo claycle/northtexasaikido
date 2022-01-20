@@ -11,6 +11,7 @@ menu:
     name: Schedule
     weight: 100
     parent: classes
+    pre: '<i class="fad fa-clock"></i>'
 
 schedule:
   - day: Tuesday
@@ -43,8 +44,9 @@ schedule:
       *No classes at this time.*
     
 ---
-
-# Class Schedule
+{{< hmod >}}
+Class Schedule 
+{{< /hmod >}}
 
 The NTA dojo is open for Aikido classes Tuesday through Saturday of every week. Supervised open workout is available on Sundays. The dojo is closed on major holidays.
 

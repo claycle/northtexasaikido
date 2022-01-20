@@ -9,6 +9,7 @@ menu:
     name: Etiquette
     weight: 1010
     parent: classes
+    pre: '<i class="fad fa-praying-hands"></i>'
     
 ---
 

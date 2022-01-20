@@ -17,7 +17,7 @@
                     {{ if .HasChildren }}
                     <li class="nav-item dropdown">
                         <a class='nav-link dropdown-toggle  {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active {{ end }}' href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ .Name }}
+                            {{ .Pre }} {{ .Name }} {{ .Post }}
                         </a>
     
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -26,7 +26,8 @@
                                 <li><hr class="dropdown-divider"></li>
                             {{ else }}
                                 <li>
-                                    <a class='dropdown-item  {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active {{ end }}' href="{{ .URL }}"> {{ .Name }}</a>
+                                    <a class='dropdown-item  {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active {{ end }}' href="{{ .URL }}">
+                                        {{ .Pre }} {{ .Name }} {{ .Post }}</a>
                                 </li>
                             {{ end }}
                             {{ end }}
@@ -39,7 +40,7 @@
                     {{ else }}
                         <li class="nav-item">
                             <a class='nav-link {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active {{ end }}' href="{{ absURL .URL }}">
-                                {{ .Name }}
+                                {{ .Pre }} {{ .Name }} {{ .Post }}
                             </a>
                         </li>
                     {{ end }}
