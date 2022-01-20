@@ -1,6 +1,6 @@
 # North Texas Aikido
 
-Current Version: 0.1a (alpha) / 2020
+Current Version: 0.1a (alpha) / 2022
 
 ## Client
 
@@ -13,3 +13,5 @@ This site is created using Hugo (https://gohugo.io) and Bootstrap5 (https://getb
 ## Theme
 
 The site is built on a custom theme, nta.
+
+Copyright (c) 2022 Clay Luther and North Texas Aikido. All Rights Reserved.
