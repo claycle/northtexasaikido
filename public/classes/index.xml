@@ -1,37 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Classes on North Texas Aikido</title>
-    <link>https://northtexasaikido.com/classes/</link>
-    <description>Recent content in Classes on North Texas Aikido</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://northtexasaikido.com/classes/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Dues</title>
-      <link>https://northtexasaikido.com/classes/dues/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://northtexasaikido.com/classes/dues/</guid>
-      <description>Dues Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac tincidunt vitae semper quis lectus nulla at volutpat. Vitae et leo duis ut diam quam nulla porttitor massa. Ipsum dolor sit amet consectetur adipiscing elit. Nulla pellentesque dignissim enim sit. Rutrum quisque non tellus orci ac auctor augue. Et netus et malesuada fames ac turpis. Vel facilisis volutpat est velit egestas dui id ornare.</description>
-    </item>
-    
-    <item>
-      <title>Etiquette</title>
-      <link>https://northtexasaikido.com/classes/etiquette/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://northtexasaikido.com/classes/etiquette/</guid>
-      <description>Etiquette Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac tincidunt vitae semper quis lectus nulla at volutpat. Vitae et leo duis ut diam quam nulla porttitor massa. Ipsum dolor sit amet consectetur adipiscing elit. Nulla pellentesque dignissim enim sit. Rutrum quisque non tellus orci ac auctor augue. Et netus et malesuada fames ac turpis. Vel facilisis volutpat est velit egestas dui id ornare.</description>
-    </item>
-    
-    <item>
-      <title>Schedule</title>
-      <link>https://northtexasaikido.com/classes/schedule/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://northtexasaikido.com/classes/schedule/</guid>
-      <description>Schedule Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac tincidunt vitae semper quis lectus nulla at volutpat. Vitae et leo duis ut diam quam nulla porttitor massa. Ipsum dolor sit amet consectetur adipiscing elit. Nulla pellentesque dignissim enim sit. Rutrum quisque non tellus orci ac auctor augue. Et netus et malesuada fames ac turpis. Vel facilisis volutpat est velit egestas dui id ornare.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Classes on North Texas Aikido</title><link>https://northtexasaikido.com/classes/</link><description>Recent content in Classes on North Texas Aikido</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://northtexasaikido.com/classes/index.xml" rel="self" type="application/rss+xml"/><item><title>Dojo Etiquette</title><link>https://northtexasaikido.com/classes/etiquette/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://northtexasaikido.com/classes/etiquette/</guid><description>Etiquette Courtesy in the dojo is more than just a tradition, it is an integral part of Aikido training. By creating a harmonious atmosphere, it aids in learning; and by practicing kindness towards others you work toward self-improvement. A dojo is a special place where people come together for mutual benefit. Here are a few simple things that are considered common courtesy in almost any dojo.
+Bow to the Shomen whenever you enter or leave the dojo or step on or off the mat.</description></item><item><title>Dues</title><link>https://northtexasaikido.com/classes/dues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://northtexasaikido.com/classes/dues/</guid><description>Monthly Dues January 20, 2022 The traditional view is that one cannot buy this type of instruction; it must be given freely and the burden of learning rests solely on the student. The dues and fees you pay are merely a way of insuring that the dojo will be sustained and the at the training and instruction can continue to progress.
+Our payment policy is simple. Dues should be paid before the first of the month.</description></item><item><title>Schedule</title><link>https://northtexasaikido.com/classes/schedule/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://northtexasaikido.com/classes/schedule/</guid><description> Class Schedule January 20, 2022 The NTA dojo is open for Aikido classes Tuesday through Saturday of every week. Supervised open workout is available on Sundays. The dojo is closed on major holidays.
+Visitors are always welcome to observe an Aikido class.
+Our class schedule is slowly returning to normal after the pandemic year. Classes are currently open to adult students who have been fully vaccinated against COVID.</description></item></channel></rss>
