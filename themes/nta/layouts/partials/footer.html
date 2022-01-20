@@ -1,5 +1,4 @@
 <footer>
-
     <div class="container-fluid bg-nta-blue">
         <div class="row footer-text pt-2 row-cols-1 row-cols-md-2 ps-2 pe-2">
             <div class="col text-center text-md-start text-white">
@@ -36,7 +35,15 @@
             </div>
         </div>
     </div>
-    
+    <div id="hugoinfo" class="text-small text-center text-white bg-dark">
+        Kind = "{{ .Kind }}" : 
+        Layout = "{{ .Layout }}" : 
+        Type = "{{ .Type }}" : 
+        Section = "{{ .Section }}" :
+        BundleType = "{{ .BundleType }}" :
+        IsPage = {{ .IsPage }} :
+        IsSection = "{{ .IsSection }}"        
+    </div>
 </footer>
 
 <!-- JavaScript and dependencies -->

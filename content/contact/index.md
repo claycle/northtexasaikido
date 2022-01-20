@@ -1,15 +1,16 @@
----
-title: "Contact the Dojo"
-subtitle: "We want to hear from you"
-draft: false
-nocover: false
-menu:
-    main:
-        identifier: "contact"
-        name: "Contact"
-        weight: 500
-        parent: ""
----
++++
+title = "Contact the Dojo"
+subtitle = "We want to hear from you"
+draft = false
+nocover = false
+layout = "contact"
+
+[menu.main]
+identifier = "contact"
+name = "Contact"
+weight = 500
+parent = ""
++++
 
 # Contact Us
 

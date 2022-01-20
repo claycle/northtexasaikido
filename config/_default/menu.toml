@@ -1,0 +1,27 @@
+[[main]]
+identifier = "directions"
+name = "Directions"
+weight = 100
+parent = "about"
+url = "/#directions"
+
+[[main]]
+identifier = "latestnews"
+name = "Latest News"
+weight = 200
+parent = "about"
+url = "/#news"
+
+[[main]]
+identifier = "abouthr01"
+name = "-"
+weight = 1000
+parent = "about"
+
+[[main]]
+identifier = "classeshr01"
+name = "-"
+weight = 1000
+parent = "classes"
+
+

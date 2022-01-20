@@ -1,6 +1,7 @@
 main:
   - identifier: directions
     name: Directions
-    url: "/"
+    url: "/#directions"
     weight: 100
-    post: Our facinating origins
+    parent: "about"
+    

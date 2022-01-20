@@ -1,0 +1,12 @@
+main:
+  - identifier: directions
+    name: Directions
+    url: "/#directions"
+    weight: 100
+    parent: "about"
+  - identifier: other
+    name: Other
+    url: "/other"
+    weight: 200
+    parent: "about"
+    

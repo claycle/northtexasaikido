@@ -128,7 +128,7 @@ ul>li.nav-item.dropdown>ul {
 }
 
 ul>li.nav-item.dropdown>ul>li>a {
-    color: green !important;
+    color: $white !important;
 }
 
 .navbar-brand>img {
@@ -143,6 +143,10 @@ a.navbar-brand {
 a.navbar-brand:hover {
     transition: text-shadow 0.5s;
     text-shadow: 0px 0px 5px $white;
+}
+
+.dropdown-divider {
+    color: $white;
 }
 
 // Cover Image Styles
