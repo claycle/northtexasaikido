@@ -1,5 +1,6 @@
 {{ if not .Params.nocover }}
 {{ $img := .Resources.GetMatch "cover.*" }}
+{{ $img1x1 := .Resources.GetMatch "cover-1x1.*" }}
 <style>
     #cover {
         background-image: url({{- if $img }}
@@ -8,6 +9,13 @@
         {{- $.Param "cover" -}}
         {{ end -}});
     }
+{{ if $img1x1 }}
+    @media (max-width: 767.98px) {
+        #cover {
+            background-image: url({{- $img1x1 -}});
+        }
+    }
+{{ end }}
 </style>
 {{ $mon := $.Param "showmon" }}
 {{ $title := $.Param "alttitle" }}

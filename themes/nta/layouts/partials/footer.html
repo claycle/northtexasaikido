@@ -1,5 +1,5 @@
 <footer>
-    <div class="container-fluid bg-nta-blue">
+    <div class="container-fluid bg-nta-blue pt-2 ps-4 pe-4">
         <div class="row footer-text pt-2 row-cols-1 row-cols-md-2 ps-2 pe-2">
             <div class="col text-center text-md-start text-white">
                 <h2 class="text-white">{{ $.Site.Title }}</h2>
@@ -34,15 +34,6 @@
                 <span class="crafted text-spacing-25 text-lowercase"><a href="#" data-secret="{{$email}}">crafted by claycle</a></span>
             </div>
         </div>
-    </div>
-    <div id="hugoinfo" class="text-small text-center text-white bg-dark">
-        Kind = "{{ .Kind }}" : 
-        Layout = "{{ .Layout }}" : 
-        Type = "{{ .Type }}" : 
-        Section = "{{ .Section }}" :
-        BundleType = "{{ .BundleType }}" :
-        IsPage = {{ .IsPage }} :
-        IsSection = "{{ .IsSection }}"        
     </div>
 </footer>
 

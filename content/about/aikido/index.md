@@ -1,16 +1,16 @@
-+++
-title = "Aikido"
-subtitle = ""
-draft = false
-nocover = false
+---
+title: About Iwama-Style Aikido
+subtitle: O-Sensei's Legacy
+draft: false
+nocover: false
+layout: aikido
+menu:
+  main:
+    identifier: aikido
+    name: Our Aikido
+    weight: 1100
+    parent: about
+    
+---
 
-[menu.main]
-identifier = "aikido"
-name = "Our Aikido"
-weight = 1100
-parent = "about"
-+++
-
-# Aikido
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac tincidunt vitae semper quis lectus nulla at volutpat. Vitae et leo duis ut diam quam nulla porttitor massa. Ipsum dolor sit amet consectetur adipiscing elit. Nulla pellentesque dignissim enim sit. Rutrum quisque non tellus orci ac auctor augue. Et netus et malesuada fames ac turpis. Vel facilisis volutpat est velit egestas dui id ornare. Tristique magna sit amet purus gravida quis. Maecenas volutpat blandit aliquam etiam erat velit. Placerat vestibulum lectus mauris ultrices eros in cursus turpis. Accumsan in nisl nisi scelerisque eu. Vitae aliquet nec ullamcorper sit amet risus nullam eget felis.
+Aikido is written in Japanese using three characters. They are translated as “Ai” - Harmony, “Ki” - Spirit, and “Do” - the Way; or in one translation, "The way of spiritual harmony." It is a comparatively modern and extremely sophisticated martial art. Being purely self-defensive, it stresses the avoidance of conflict as an integral part of its philosophical and technical tenets.

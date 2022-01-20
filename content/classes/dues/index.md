@@ -1,16 +1,46 @@
-+++
-title = "Dues"
-subtitle = ""
-draft = false
-nocover = false
+---
+title: Dues
+alttitle: Aikido Classes
+subtitle: 'dues'
+draft: false
+nocover: false
+layout: dues
+menu:
+  main:
+    identifier: dues
+    name: Dues
+    weight: 200
+    parent: classes
+    
+dues:
+  - title: Adults
+    description: Ages 16 and older 
+    amount: 125
+    
+  - title: Students
+    description: Ages 16 and older, with valid student id
+    amount: 100
+    
+  - title: Kids
+    description: Children 6 to 15 years old
+    amount: 75
+    
+  - title: Parent & Child
+    description: Parent and child co-training class
+    amount: 60
+    
+  - title: P & C Legacy
+    description: Parent and child co-training class, legacy discount
+    amount: 30
+  
+---
 
-[menu.main]
-identifier = "dues"
-name = "Dues"
-weight = 200
-parent = "classes"
-+++
+# Monthly Dues
 
-# Dues
+The traditional view is that one cannot buy this type of instruction; it must be given freely and the burden of learning rests solely on the student. The dues and fees you pay are merely a way of insuring that the dojo will be sustained and the at the training and instruction can continue to progress.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac tincidunt vitae semper quis lectus nulla at volutpat. Vitae et leo duis ut diam quam nulla porttitor massa. Ipsum dolor sit amet consectetur adipiscing elit. Nulla pellentesque dignissim enim sit. Rutrum quisque non tellus orci ac auctor augue. Et netus et malesuada fames ac turpis. Vel facilisis volutpat est velit egestas dui id ornare. Tristique magna sit amet purus gravida quis. Maecenas volutpat blandit aliquam etiam erat velit. Placerat vestibulum lectus mauris ultrices eros in cursus turpis. Accumsan in nisl nisi scelerisque eu. Vitae aliquet nec ullamcorper sit amet risus nullam eget felis.
+Our payment policy is simple. Dues should be paid before the first of the month. We request that you be as prompt as possible. Like everyone else, we have financial obligations and like to take care of them in a timely fashion.
+
+Dues are not transferable from month to month. Whether you attend every class or cannot attend at all, dues are required for the month. If you cannot meet these requirements for any reason, please discuss it with the *dojo cho* and we'll work something out. Communication is very important.
+
+For new students joining in the middle of the month, you will pay one month's dues, and then we will prorate the following month.

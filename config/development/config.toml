@@ -1,0 +1,6 @@
+buildDrafts = true
+minify = false
+
+[params]
+debugInfo = true
+

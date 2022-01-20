@@ -130,6 +130,9 @@ ul>li.nav-item.dropdown>ul {
 ul>li.nav-item.dropdown>ul>li>a {
     color: $white !important;
 }
+ul>li.nav-item.dropdown>ul>li>a:hover {
+    color: $nta-blue !important;
+}
 
 .navbar-brand>img {
     height: 24px;
@@ -229,6 +232,13 @@ div.container.dojocho {
     background-color: rgba($nta-blue, 0.1);
     //background-color: lighten($nta-blue, 70);
     padding: 1rem;
+}
+
+div.boxed {
+    background-color: rgba($nta-blue, 0.1);
+    //background-color: lighten($nta-blue, 70);
+    padding: 1rem;
+    padding-bottom: 0.25rem;
 }
 
 img.dojocho {
@@ -348,4 +358,8 @@ footer.bg-dark {
 
 .bg-nta-blue {
     background-color: $nta-blue;
+}
+
+div.dues-amount {
+    background-color: rgba($nta-blue, 0.1);
 }

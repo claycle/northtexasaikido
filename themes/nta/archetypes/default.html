@@ -1,15 +1,15 @@
-+++
-title = "{{ replace .Name "-" " " | title }}"
-subtitle = ""
-draft = false
-nocover = false
-
-[menu.main]
-identifier = "{{ lower (replace .Name "-" "")  }}"
-name = "{{ replace .Name "-" " " | title }}"
-weight = 100
-parent = ""
-+++
+---
+title: '{{ replace .Name "-" " " | title }}'
+subtitle: ''
+draft: false
+nocover: false
+menu:
+  main:
+    identifier: '{{ lower (replace .Name "-" "")  }}'
+    name: '{{ replace .Name "-" " " | title }}'
+    weight: 100
+    parent: ''
+---
 
 <h1>{{ .Name | title }}</h1>
 
