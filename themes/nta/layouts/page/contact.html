@@ -154,8 +154,7 @@
             console.log("RESP", jsonData);
           }
           else {
-            jsonData = JSON.parse(request.response);
-            console.log("ERR", jsonData);
+            console.log("ERR");
           }
         };
         let name = document.getElementById("namebmFtZQo=").value;
@@ -168,7 +167,7 @@
         
         let data = JSON.stringify(
           {
-            "namebmFtZQo=": name,
+            //"namebmFtZQo=": name,
             "emailZW1haWwK": email,
             "phonecGhvbmUK": phone,
             "commentY29tbWVudAo=": comment,
