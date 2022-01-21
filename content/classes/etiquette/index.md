@@ -1,5 +1,6 @@
 ---
 title: Dojo Etiquette
+description: "Etiquette for Aikido students"
 subtitle: 'and ranks'
 draft: false
 nocover: false

@@ -1,5 +1,6 @@
 ---
 title: "Home"
+description: "North Texas Aikido - Aikido on the Texas Prairie - Home Page"
 alttitle: "North Texas Aikido"
 smallhero: true
 subtitle: Aikido on the Texas Prairie

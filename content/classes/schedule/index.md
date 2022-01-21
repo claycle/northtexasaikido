@@ -1,5 +1,6 @@
 ---
 title: Schedule
+description: "North Texas Aikido schedule of classes"
 alttitle: Aikido Classes
 subtitle: 'schedule'
 draft: false

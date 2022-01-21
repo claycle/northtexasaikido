@@ -1,5 +1,6 @@
 ---
 title: About Iwama-Style Aikido
+description: "North Texas Aikido practices Iwama-style Aikido"
 subtitle: O-Sensei's Legacy
 draft: false
 nocover: false

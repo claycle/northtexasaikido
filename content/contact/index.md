@@ -1,5 +1,6 @@
 ---
 title: Contact the Dojo
+description: "Contact North Texas Aikido"
 subtitle: We want to hear from you
 draft: false
 nocover: false

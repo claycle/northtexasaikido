@@ -1,5 +1,6 @@
 ---
 title: Dues
+description: "North Texas Aikido dues for students"
 alttitle: Aikido Classes
 subtitle: 'dues'
 draft: false

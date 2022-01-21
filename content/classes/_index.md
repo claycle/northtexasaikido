@@ -1,5 +1,6 @@
 +++
 title = "Classes"
+description = "North Texas Aikido classes"
 subtitle = ""
 draft = false
 nocover = false
