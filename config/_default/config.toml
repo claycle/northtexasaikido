@@ -5,6 +5,7 @@ theme = "nta"
 relativeURLS = true
 enableEmoji = true
 enableGitInfo = true
+enableRobotsTXT = true
 
 [[module.mounts]]
 source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
