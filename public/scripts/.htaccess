@@ -1,0 +1,7 @@
+# Disable directory browsing 
+Options -Indexes
+
+<Files ~ "dbconfig.php$">
+  Order allow,deny
+  Deny from all
+</Files>
