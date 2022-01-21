@@ -17,7 +17,7 @@ menu:
 
 You may contact the dojo directly by phone during daylight hours by phone:
 
-# [972.390.9600](tel:9723909600){class="text-center mt-0 mb-3"}
+# {{< alink link="tel:9723909600" text="972.390.9600" >}}{class="text-center mt-0 mb-3"}
 
 or you may fill out the form below to send a message or question to the dojo.
 

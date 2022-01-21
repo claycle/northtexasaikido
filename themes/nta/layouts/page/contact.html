@@ -1,83 +1,181 @@
 {{ define "main" }}
 
+<!-- Base64  -->
+<!-- email: ZW1haWwK -->
+<!-- name: bmFtZQo= -->
+<!-- phone: cGhvbmUK -->
+<!-- comment: Y29tbWVudAo= -->
+
+{{ $sitekey := "81faee20-2911-41cd-8b4a-71f45b932b8c" }}
+
 <div class="container mt-4">
   <div class="row">
     <div class="col">
       {{ .Content }}
     </div>
   </div>
-  <hr/>
-  <div class="container dojocho rounded mb-4 mt-4">
-    <form class="row g-3 needs-validation" novalidate onsubmit="">
-      <div class="col-md-4">
-        <div class="form-outline">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" name="name" value="" required />
-          <div class="invalid-feedback">Please provide your name.</div>
-        </div>
-      </div>
-      
-      
-      <div class="col-md-4">
-        <div class="form-outline">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="email" value="" required autocomplete="email"/>
-          <div class="invalid-feedback">Please provide your email.</div>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-        <div class="form-outline">
-          <label for="phone" class="form-label">Phone</label>
-          <input type="tel" class="form-control" id="phone" name="phone" value="" required autocomplete="tel" pattern="^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$"/>
-          <div class="invalid-feedback">Please provide your phone number.</div>
-        </div>
-      </div>
-      
-      <div class="col-12">
-        <div class="form-outline">
-          <label for="comment" class="form-label">Comment or question</label>
-          <textarea class="form-control" name="comment" id="comment" rows="5" required></textarea>
-          <div class="invalid-feedback">Please provide a comment or question.</div>
-        </div>
-      </div>
-      
-      <div class="col-12">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-          <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label>
-          <div class="invalid-feedback">You must agree before submitting.</div>
-        </div>
-      </div>
-      
-      <div class="col-12">
-        <button class="btn btn-primary" type="submit">Send</button>
-        <button class="btn btn-secondary" type="reset">Reset</button>
-      </div>
-    </form>
-  </div>
+</div>
 
-  <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (() => {
-      'use strict';
+<hr />
 
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      const forms = document.querySelectorAll('.needs-validation');
+<div class="container dojocho rounded mb-4 mt-4">
+  <form id="contact" class="row g-3 needs-validation" novalidate onsubmit="">
+    <div class="col-md-4">
+      <div class="form-outline">
+        <label for="namebmFtZQo=" class="form-label">Name</label>
+        <input type="text" class="form-control" id="namebmFtZQo=" name="namebmFtZQo=" value="" required placeholder="Your name" />
+        <div class="invalid-feedback">Please provide your name.</div>
+      </div>
+    </div>
 
-      // Loop over them and prevent submission
-      Array.prototype.slice.call(forms).forEach((form) => {
-        form.addEventListener('submit', (event) => {
-          if (!form.checkValidity()) {
-            console.log("INVALID");
-            event.preventDefault();
-            event.stopPropagation();
+
+    <div class="col-md-4">
+      <div class="form-outline">
+        <label for="emailZW1haWwK" class="form-label">Email</label>
+        <input type="email" class="form-control" id="emailZW1haWwK" name="emailZW1haWwK" value="" placeholder="your@email.com" required autocomplete="email" />
+        <div class="invalid-feedback">Please provide your email.</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="form-outline">
+        <label for="phonecGhvbmUK" class="form-label">Phone</label>
+        <input type="tel" class="form-control" id="phonecGhvbmUK" name="phonecGhvbmUK" value="" placeholder="555-555-5555" required autocomplete="tel" pattern="^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$" />
+        <div class="invalid-feedback">Please provide your phone number.</div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="form-outline">
+        <label for="commentY29tbWVudAo=" class="form-label">Comment or question</label>
+        <textarea class="form-control" name="commentY29tbWVudAo=" id="commentY29tbWVudAo=" rows="5" required placeholdder="Your question or comment"></textarea>
+        <div class="invalid-feedback">Please provide a comment or question.</div>
+      </div>
+    </div>
+
+    <div id="d_humanaHVtYW4K" class="col-12 d_humanaHVtYW4K" style="transition: opacity 1s;">
+      <div class="form-outline">
+        <div class="boxed">
+          <div class="row">
+            <div class="col col-10">
+              <h5 class="mb-0">Are you human?</h5>
+              Please tap on the <i class="fad fa-fingerprint"></i> to close this box before you send your message.  
+            </div>
+            <div class="col">
+              <button id="b_humanaHVtYW4K" class="btn b_humanaHVtYW4K" type="button">
+                <span><i class="fad fa-fingerprint fa-4x"></i></span>
+              </button>
+            </div>
+            <div id="w_humanaHVtYW4K" class="col col-12 mt-2 d-none">
+              <div  class="alert alert-warning">
+                Please close this box by tapping on the fingerprint.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <input autocomplete="off" type="hidden" id="humanaHVtYW4K" name="humanaHVtYW4K" value="" required /></i>
+
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Send</button>
+    </div>
+
+    <!-- Pooh Bear? -->
+    <label class="pooh d-none" for="name">Your Full Name</label>
+    <input class="pooh d-none" autocomplete="off" type="text" id="name" name="name" placeholder="Your name here">
+    <label class="pooh d-none" for="email">Your Email</label>
+    <input class="pooh d-none" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
+
+  </form>
+</div>
+
+<script>
+  window.addEventListener('load', (event) => {
+    
+    // Set up the fingerprint event
+    let fingerprint = document.getElementById("b_humanaHVtYW4K");
+    let fingerbox = document.getElementById("d_humanaHVtYW4K");
+    if (fingerprint && fingerbox) fingerprint.addEventListener("click", (event) => {
+      //console.log("fingerprinted", fingerprint, fingerbox);
+      fingerbox.innerHTML = "<span class='fs-3 text-serif'>Hello, human.</span>";
+      let eok = document.getElementById("humanaHVtYW4K");
+      if (eok) {
+        eok.value = "humanaHVtYW4K";
+        console.log("OK human");
+      }
+
+      setTimeout(function() {
+        fingerbox.classList.add('zero-opacity');
+        setTimeout(function() {
+          fingerbox.classList.add('d-none');
+        }, 1000, fingerbox);
+      }, 0, fingerbox);
+      fingerbox.classList.add('zero-opacity');
+    });
+    
+    // Form Validation
+    let form = document.getElementById("contact");
+    form?.addEventListener("submit", (event) => {
+      let valid = true;
+      if (!form.checkValidity()) {
+        console.log("INVALID");
+        event.preventDefault();
+        event.stopPropagation();
+        valid = false;
+      }
+      
+      let eok = document.getElementById("humanaHVtYW4K");
+      if (eok) {
+        if (eok.value != "humanaHVtYW4K") {
+          console.log("INHUMAN");
+          event.preventDefault();
+          event.stopPropagation();
+          let warn = document.getElementById("w_humanaHVtYW4K");
+          warn?.classList.remove('d-none');
+          valid = false;
+        }
+      }
+      form.classList.add('was-validated');
+      
+      if (valid) {
+        console.log("Valid");
+        event.preventDefault();
+        let request = new XMLHttpRequest();
+        let url = "http://northtexasaikido.com/script/submitContact.php";
+        request.open("POST", url, true);
+        request.setRequestHeader("Content-Type", "application/json");
+        request.onreadystatechange = function () {
+          if (request.readyState === 4 && request.status === 200) {
+            jsonData = JSON.parse(request.response);
+            console.log("RESP", jsonData);
           }
-          form.classList.add('was-validated');
-        }, false);
-        console.log("VALID");
-      });
-    })();
-  </script>
+        };
+        let name = document.getElementById("namebmFtZQo=").value;
+        let email = document.getElementById("emailZW1haWwK").value;
+        let phone = document.getElementById("phonecGhvbmUK").value;
+        let comment = document.getElementById("commentY29tbWVudAo=").value;
+        let human = document.getElementById("humanaHVtYW4K").value;
+        let poohname = document.getElementById("name").value;
+        let poohmail = document.getElementById("email").value;
+        
+        let data = JSON.stringify(
+          {
+            "namebmFtZQo=": name,
+            "emailZW1haWwK": email,
+            "phonecGhvbmUK": phone,
+            "commentY29tbWVudAo=": comment,
+            "humanaHVtYW4K": human,
+            "name": poohname,
+            "email": poohmail
+          }
+        );
+        request.send(data);
+      }
+    }, false);
+  });
+  
+</script>
 
-  {{ end }}
+{{ end }}

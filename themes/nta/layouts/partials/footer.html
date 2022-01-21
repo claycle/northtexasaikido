@@ -16,7 +16,7 @@
                 <p class="text-white mt-2">
                     2150 East Lucas Road<br />
                     Allen TX 75002<br />
-                    <a class="gold" href="#" data-secret="dGVsOjk3MjM5MDk2MDA=">972.390.9600</a>
+                    <a class="gold" href="tel:555-555-5555" data-secret="dGVsOjk3MjM5MDk2MDA=" data-secrettext="OTcyLjM5MC45NjAw">555-555-5555</a>
                 </p>
             </div>
         </div>
@@ -31,7 +31,7 @@
         <div class="row footer-text pb-2">
             <div class="col text-center text-white text-smaller">
                 {{ $email := .Param "crafted_email_url" | base64Encode }}
-                <span class="crafted text-spacing-25 text-lowercase"><a href="#" data-secret="{{$email}}">crafted by claycle</a></span>
+                <span class="crafted text-spacing-25 text-lowercase"><a href="mailto:a@b.c" data-secret="{{$email}}">crafted by claycle</a></span>
             </div>
         </div>
     </div>

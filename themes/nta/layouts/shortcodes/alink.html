@@ -1,0 +1,15 @@
+{{ $link := "" }}
+{{ $text := "" }}
+{{ if .IsNamedParams }}
+    {{ $link = .Get "link" }}
+    {{ $text = .Get "text" }}
+{{ else }}
+    {{ $link = .Get 0 }}
+    {{ $text = .Get 1 }}
+{{ end }}
+
+{{ if not $text }}
+    {{ $text = $link }}
+{{ end }}
+
+<a href="#" data-secret="{{ base64Encode $link }}" data-secrettext="{{ base64Encode $text }}"></a>

@@ -10,6 +10,7 @@ menu:
     name: Our Aikido
     weight: 1100
     parent: about
+    pre: '<i class="fad fa-info-circle"></i>'
     
 ---
 
