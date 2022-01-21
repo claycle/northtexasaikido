@@ -145,8 +145,9 @@
         let request = new XMLHttpRequest();
         let url = "https://dev.northtexasaikido.com/scripts/submitContact.php";
         request.open("POST", url, true);
-        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-        
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.setRequestHeader('Accept', 'application/json');
+        //request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         //request.setRequestHeader("Content-Type", "multipart/form-data");
         //request.setRequestHeader("Access-Control-Allow-Origin", "*");
         //request.setRequestHeader("Access-Control-Request-Method", "POST");
@@ -169,13 +170,14 @@
         
         let data = JSON.stringify(
           {
+            "testing": false,
             "namebmFtZQo=": name,
             "emailZW1haWwK": email,
             "phonecGhvbmUK": phone,
             "commentY29tbWVudAo=": comment,
             "humanaHVtYW4K": human,
-            "name": poohname,
-            "email": poohmail
+            "name": poohname + "TESTING",
+            "email": poohmail,
           }
         );
         console.log("SEND", data);
