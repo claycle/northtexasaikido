@@ -55,13 +55,13 @@
 
     <div id="d_humanaHVtYW4K" class="col-12 d_humanaHVtYW4K" style="transition: opacity 1s;">
       <div class="form-outline">
-        <div class="boxed">
+        <div class="boxed rounded">
           <div class="row">
             <div class="col col-10">
               <h5 class="mb-0">Are you human?</h5>
               Please tap on the <i class="fad fa-fingerprint"></i> to close this box before you send your message.  
             </div>
-            <div class="col">
+            <div class="col text-end">
               <button id="b_humanaHVtYW4K" class="btn b_humanaHVtYW4K" type="button">
                 <span><i class="fad fa-fingerprint fa-4x"></i></span>
               </button>
@@ -79,7 +79,7 @@
     <input autocomplete="off" type="hidden" id="humanaHVtYW4K" name="humanaHVtYW4K" value="" required /></i>
 
     <div class="col-12">
-      <button class="btn btn-primary" type="submit">Send</button>
+      <button class="btn btn-primary" type="submit" id="submit">Send</button>
     </div>
 
     <!-- Pooh Bear? -->
@@ -89,12 +89,33 @@
     <input class="pooh d-none" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
 
   </form>
+  <div id="error" class="row mt-4 d-none">
+    <div class="col">
+      <div class="alert alert-danger">
+        There was an error submitting your information. Please try again later.
+      </div>
+    </div>
+  </div>
+  
+  
+  <div id="success" class="row mt-4 d-none">
+    <div class="col">
+      <div class="alert alert-success">
+        Your information was submitted. Someone from the dojo will contact you within two days.
+      </div>
+    </div>
+  </div>
+  
 </div>
 
+<!-- jQuery simplifies the Ajax post -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script crossorigin="anonymous">
   window.addEventListener('load', (event) => {
+    
+    document.getElementById("error")?.classList.add("d-none");
+    document.getElementById("success")?.classList.add("d-none");
     
     // Set up the fingerprint event
     let fingerprint = document.getElementById("b_humanaHVtYW4K");
@@ -122,7 +143,7 @@
     form?.addEventListener("submit", (event) => {
       let valid = true;
       if (!form.checkValidity()) {
-        console.log("INVALID");
+        console.log("Invalid");
         event.preventDefault();
         event.stopPropagation();
         valid = false;
@@ -131,7 +152,7 @@
       let eok = document.getElementById("humanaHVtYW4K");
       if (eok) {
         if (eok.value != "humanaHVtYW4K") {
-          console.log("INHUMAN");
+          console.log("Not human");
           event.preventDefault();
           event.stopPropagation();
           let warn = document.getElementById("w_humanaHVtYW4K");
@@ -141,7 +162,7 @@
       }
       form.classList.add('was-validated');
       
-      
+      // If valid, then post
       if (valid) 
       {
           console.log("Valid");
@@ -149,6 +170,7 @@
           
           let datas = $("#contact").serialize();
           let URL = $("#contact").attr("action");
+          
           console.log("POST", URL, datas);
           $.ajax({
               type: 'post',
@@ -157,12 +179,12 @@
               data: datas,
               beforeSend: function() {
                   console.log("BEFORE");
-                  //$('#submit').attr('disabled', true);
+                  $('#submit').attr('disabled', true);
                   //$('#submit').after('<span class="wait">&nbsp;<img src="image/loading.gif" alt="" /></span>');
               },
               complete: function() {
                   console.log("COMPLETE");
-                  //$('#submit').attr('disabled', false);
+                  $('#submit').attr('disabled', false);
                   //$('.wait').remove();
               },  
               success: function(data)
@@ -171,9 +193,11 @@
                   {
                     console.log("ERROR");
                       //output = '<div class="error">'+data.text+'</div>';
+                      $("#error").removeClass("d-none");
                   }else{
                       console.log("SUCCESS");
-                      output = '<div class="success">'+data.text+'</div>';
+                      $('#contact').addClass("d-none");
+                      $('#succecss').removeClass("d-none");
                       //$('input[type=text]').val(''); 
                       //$('#contactform textarea').val(''); 
                   }

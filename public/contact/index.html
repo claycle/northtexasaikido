@@ -136,13 +136,13 @@ Contact
 </div>
 <div id=d_humanaHVtYW4K class="col-12 d_humanaHVtYW4K" style="transition:opacity 1s">
 <div class=form-outline>
-<div class=boxed>
+<div class="boxed rounded">
 <div class=row>
 <div class="col col-10">
 <h5 class=mb-0>Are you human?</h5>
 Please tap on the <i class="fad fa-fingerprint"></i> to close this box before you send your message.
 </div>
-<div class=col>
+<div class="col text-end">
 <button id=b_humanaHVtYW4K class="btn b_humanaHVtYW4K" type=button>
 <span><i class="fad fa-fingerprint fa-4x"></i></span>
 </button>
@@ -158,16 +158,30 @@ Please close this box by tapping on the fingerprint.
 </div>
 <input autocomplete=off type=hidden id=humanaHVtYW4K name=humanaHVtYW4K required></i>
 <div class=col-12>
-<button class="btn btn-primary" type=submit>Send</button>
+<button class="btn btn-primary" type=submit id=submit>Send</button>
 </div>
 <label class="pooh d-none" for=name>Your Full Name</label>
 <input class="pooh d-none" autocomplete=off type=text id=name name=name placeholder="Your name here">
 <label class="pooh d-none" for=email>Your Email</label>
 <input class="pooh d-none" autocomplete=off type=email id=email name=email placeholder="Your e-mail here">
 </form>
+<div id=error class="row mt-4 d-none">
+<div class=col>
+<div class="alert alert-danger">
+There was an error submitting your information. Please try again later.
+</div>
+</div>
+</div>
+<div id=success class="row mt-4 d-none">
+<div class=col>
+<div class="alert alert-success">
+Your information was submitted. Someone from the dojo will contact you within two days.
+</div>
+</div>
+</div>
 </div>
 <script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script>
-<script crossorigin=anonymous>window.addEventListener('load',d=>{let c=document.getElementById("b_humanaHVtYW4K"),a=document.getElementById("d_humanaHVtYW4K");c&&a&&c.addEventListener("click",c=>{a.innerHTML="<span class='fs-3 text-serif'>Hello, human.</span>";let b=document.getElementById("humanaHVtYW4K");b&&(b.value="humanaHVtYW4K",console.log("OK human")),setTimeout(function(){a.classList.add('zero-opacity'),setTimeout(function(){a.classList.add('d-none')},1e3,a)},0,a),a.classList.add('zero-opacity')});let b=document.getElementById("contact");b?.addEventListener("submit",a=>{let c=!0;b.checkValidity()||(console.log("INVALID"),a.preventDefault(),a.stopPropagation(),c=!1);let d=document.getElementById("humanaHVtYW4K");if(d)if(d.value!="humanaHVtYW4K"){console.log("INHUMAN"),a.preventDefault(),a.stopPropagation();let b=document.getElementById("w_humanaHVtYW4K");b?.classList.remove('d-none'),c=!1}if(b.classList.add('was-validated'),c){console.log("Valid"),a.preventDefault();let b=$("#contact").serialize(),c=$("#contact").attr("action");console.log("POST",c,b),$.ajax({type:'post',url:c,dataType:'json',data:b,beforeSend:function(){console.log("BEFORE")},complete:function(){console.log("COMPLETE")},success:function(a){a.type=='error'?console.log("ERROR"):(console.log("SUCCESS"),output='<div class="success">'+a.text+'</div>')}})}},!1)})</script>
+<script crossorigin=anonymous>window.addEventListener('load',d=>{document.getElementById("error")?.classList.add("d-none"),document.getElementById("success")?.classList.add("d-none");let c=document.getElementById("b_humanaHVtYW4K"),a=document.getElementById("d_humanaHVtYW4K");c&&a&&c.addEventListener("click",c=>{a.innerHTML="<span class='fs-3 text-serif'>Hello, human.</span>";let b=document.getElementById("humanaHVtYW4K");b&&(b.value="humanaHVtYW4K",console.log("OK human")),setTimeout(function(){a.classList.add('zero-opacity'),setTimeout(function(){a.classList.add('d-none')},1e3,a)},0,a),a.classList.add('zero-opacity')});let b=document.getElementById("contact");b?.addEventListener("submit",a=>{let c=!0;b.checkValidity()||(console.log("Invalid"),a.preventDefault(),a.stopPropagation(),c=!1);let d=document.getElementById("humanaHVtYW4K");if(d)if(d.value!="humanaHVtYW4K"){console.log("Not human"),a.preventDefault(),a.stopPropagation();let b=document.getElementById("w_humanaHVtYW4K");b?.classList.remove('d-none'),c=!1}if(b.classList.add('was-validated'),c){console.log("Valid"),a.preventDefault();let b=$("#contact").serialize(),c=$("#contact").attr("action");console.log("POST",c,b),$.ajax({type:'post',url:c,dataType:'json',data:b,beforeSend:function(){console.log("BEFORE"),$('#submit').attr('disabled',!0)},complete:function(){console.log("COMPLETE"),$('#submit').attr('disabled',!1)},success:function(a){a.type=='error'?(console.log("ERROR"),$("#error").removeClass("d-none")):(console.log("SUCCESS"),$('#contact').addClass("d-none"),$('#succecss').removeClass("d-none"))}})}},!1)})</script>
 </div>
 </main>
 <footer>

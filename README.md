@@ -1,6 +1,6 @@
 # North Texas Aikido
 
-Current Version: 0.1a (alpha) / 2022
+Current Version: 1.0 (release) / 2022
 
 ## Client
 
