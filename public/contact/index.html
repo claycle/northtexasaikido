@@ -98,11 +98,53 @@ Contact
 <h1 class="text-center mt-0 mb-3" id=9723909600tel9723909600><a href=tel:9723909600>972.390.9600</a></h1>
 <p>or you may fill out the form below to send a message or question to the dojo.</p>
 <p>We will contact you within two business days by phone or email.</p>
+</div>
+</div>
 <hr>
-<form></form>
+<div class="container dojocho rounded mb-4 mt-4">
+<form class="row g-3 needs-validation" novalidate>
+<div class=col-md-4>
+<div class=form-outline>
+<label for=name class=form-label>Name</label>
+<input type=text class=form-control id=name name=name required>
+<div class=invalid-feedback>Please provide your name.</div>
 </div>
 </div>
+<div class=col-md-4>
+<div class=form-outline>
+<label for=email class=form-label>Email</label>
+<input type=email class=form-control id=email name=email required autocomplete=email>
+<div class=invalid-feedback>Please provide your email.</div>
 </div>
+</div>
+<div class=col-md-4>
+<div class=form-outline>
+<label for=phone class=form-label>Phone</label>
+<input type=tel class=form-control id=phone name=phone required autocomplete=tel pattern=^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$>
+<div class=invalid-feedback>Please provide your phone number.</div>
+</div>
+</div>
+<div class=col-12>
+<div class=form-outline>
+<label for=comment class=form-label>Comment or question</label>
+<textarea class=form-control name=comment id=comment rows=5 required></textarea>
+<div class=invalid-feedback>Please provide a comment or question.</div>
+</div>
+</div>
+<div class=col-12>
+<div class=form-check>
+<input class=form-check-input type=checkbox id=invalidCheck required>
+<label class=form-check-label for=invalidCheck>Agree to terms and conditions</label>
+<div class=invalid-feedback>You must agree before submitting.</div>
+</div>
+</div>
+<div class=col-12>
+<button class="btn btn-primary" type=submit>Send</button>
+<button class="btn btn-secondary" type=reset>Reset</button>
+</div>
+</form>
+</div>
+<script>(()=>{'use strict';const a=document.querySelectorAll('.needs-validation');Array.prototype.slice.call(a).forEach(a=>{a.addEventListener('submit',b=>{a.checkValidity()||(console.log("INVALID"),b.preventDefault(),b.stopPropagation()),a.classList.add('was-validated')},!1),console.log("VALID")})})()</script>
 </div>
 </main>
 <footer>
