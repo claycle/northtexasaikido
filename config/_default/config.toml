@@ -7,7 +7,23 @@ enableEmoji = true
 enableGitInfo = true
 enableRobotsTXT = true
 
+googleAnalytics = "UA-114931239-3"
+
+[params]
+  description = 'North Texas Aikido - Aikido on the Texas Prairie'
+
 [[module.mounts]]
 source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 target = "assets/js/bootstrap.bundle.min.js"
 
+
+[params.homepage_meta_tags]
+meta_description = "North Texas Aikido - Aikido on the Texas Prairie"
+meta_og_title = "North Texas Aikido"
+meta_og_type = "website"
+meta_og_url = "https://northtexasaikido.com"
+meta_og_image = ""
+meta_og_description = "North Texas Aikido - Aikido on the Texas Prairie"
+meta_twitter_card = "summary_large_image"
+meta_twitter_site = "@North_TX_Aikido"
+meta_twitter_creator = "@North_TX_Aikido"

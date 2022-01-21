@@ -1,5 +1,12 @@
 <head>
+    {{ template "_internal/google_analytics.html" . }}
+    
+    {{ template "_internal/twitter_cards.html" . }}
+    
+    {{ template "_internal/opengraph.html" . }}
+    
     <title>{{ .Title }} - {{.Site.Title}}</title>
+    
     <meta charset="utf-8">
     <meta name="description" content="Website meta description for google search results go here" />
     <meta name="dc.relation" content="{{ .Site.BaseURL }}" />
