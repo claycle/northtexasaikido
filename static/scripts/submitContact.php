@@ -2,6 +2,8 @@
 
 require_once "dbconfig.php";
 
+header('Content-Type: application/json; charset=utf-8');
+
 $RC = 200;
 
 // HCaptcha
@@ -150,6 +152,8 @@ try {
 
 		recordInDatabase();
 		sendEmailMessage();
+		
+		echo json_encode( [ 'SUCCESS' => 200 ]);
 
 	} else {
 		error_log("submitContact: Pooh-bear came knocking, name: " . $poohname . "; email: " . $poohemail . " [" .$_SERVER['REMOTE_ADDR'] . "]");
