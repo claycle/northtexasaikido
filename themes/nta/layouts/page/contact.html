@@ -145,7 +145,9 @@
         let request = new XMLHttpRequest();
         let url = "https://dev.northtexasaikido.com/scripts/submitContact.php";
         request.open("POST", url, true);
-        request.setRequestHeader("Content-Type", "multipart/form-data");
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        
+        //request.setRequestHeader("Content-Type", "multipart/form-data");
         //request.setRequestHeader("Access-Control-Allow-Origin", "*");
         //request.setRequestHeader("Access-Control-Request-Method", "POST");
         request.onreadystatechange = function () {
@@ -176,6 +178,7 @@
             "email": poohmail
           }
         );
+        console.log("SEND", data);
         request.send(data);
       }
     }, false);

@@ -137,6 +137,8 @@ try {
 		// name: bmFtZQo=
 		// phone: cGhvbmUK
 		// comment: Y29tbWVudAo= -->
+		error_log("submitContact POST: ");
+		error_log(print_r($_POST, true));
 
 		if (!isset($_POST['namebmFtZQo='])) {throw new Exception("name not set - check hash agreement bmFtZQo=");}
 		if (!isset($_POST['emailZW1haWwK'])) {throw new Exception("email not set - check hash agreement ZW1haWwK");}
