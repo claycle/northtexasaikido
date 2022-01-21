@@ -16,9 +16,7 @@
   </div>
 </div>
 
-<hr />
-
-<div class="container dojocho rounded mb-4 mt-4">
+<div id="contact_container" class="container dojocho rounded mb-4 mt-4">
   <form id="contact" class="row g-3 needs-validation" novalidate action="/scripts/submitContact.php">
     <div class="col-md-4">
       <div class="form-outline">
@@ -59,7 +57,7 @@
           <div class="row">
             <div class="col col-10">
               <h5 class="mb-0">Are you human?</h5>
-              Please tap on the <i class="fad fa-fingerprint"></i> to close this box before you send your message.  
+              Please tap on the <i class="fad fa-fingerprint"></i> to close this box before you send your message.
             </div>
             <div class="col text-end">
               <button id="b_humanaHVtYW4K" class="btn b_humanaHVtYW4K" type="button">
@@ -67,7 +65,7 @@
               </button>
             </div>
             <div id="w_humanaHVtYW4K" class="col col-12 mt-2 d-none">
-              <div  class="alert alert-warning">
+              <div class="alert alert-warning">
                 Please close this box by tapping on the fingerprint.
               </div>
             </div>
@@ -75,7 +73,7 @@
         </div>
       </div>
     </div>
-    
+
     <input autocomplete="off" type="hidden" id="humanaHVtYW4K" name="humanaHVtYW4K" value="" required /></i>
 
     <div class="col-12">
@@ -89,6 +87,9 @@
     <input class="pooh d-none" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
 
   </form>
+</div>
+
+<div class="container">
   <div id="merror" class="row mt-4 d-none">
     <div class="col">
       <div class="alert alert-danger">
@@ -96,8 +97,7 @@
       </div>
     </div>
   </div>
-  
-  
+
   <div id="msuccess" class="row mt-4 d-none">
     <div class="col">
       <div class="alert alert-success">
@@ -105,7 +105,6 @@
       </div>
     </div>
   </div>
-  
 </div>
 
 <!-- jQuery simplifies the Ajax post -->
@@ -113,10 +112,10 @@
 
 <script crossorigin="anonymous">
   window.addEventListener('load', (event) => {
-    
+
     document.getElementById("merror")?.classList.add("d-none");
     document.getElementById("msuccess")?.classList.add("d-none");
-    
+
     // Set up the fingerprint event
     let fingerprint = document.getElementById("b_humanaHVtYW4K");
     let fingerbox = document.getElementById("d_humanaHVtYW4K");
@@ -137,7 +136,7 @@
       }, 0, fingerbox);
       fingerbox.classList.add('zero-opacity');
     });
-    
+
     // Form Validation
     let form = document.getElementById("contact");
     form?.addEventListener("submit", (event) => {
@@ -148,7 +147,7 @@
         event.stopPropagation();
         valid = false;
       }
-      
+
       let eok = document.getElementById("humanaHVtYW4K");
       if (eok) {
         if (eok.value != "humanaHVtYW4K") {
@@ -161,100 +160,47 @@
         }
       }
       form.classList.add('was-validated');
-      
+
       // If valid, then post
-      if (valid) 
-      {
-          console.log("Valid");
-          event.preventDefault();
-          
-          let datas = $("#contact").serialize();
-          let URL = $("#contact").attr("action");
-          
-          console.log("POST", URL, datas);
-          $.ajax({
-              type: 'post',
-              url: URL, 
-              dataType: 'json',
-              data: datas,
-              beforeSend: function() {
-                  console.log("BEFORE");
-                  $('#submit').attr('disabled', true);
-                  //$('#submit').after('<span class="wait">&nbsp;<img src="image/loading.gif" alt="" /></span>');
-              },
-              complete: function() {
-                  console.log("COMPLETE");
-                  $('#submit').attr('disabled', false);
-                  //$('.wait').remove();
-              },  
-              success: function(data)
-              {
-                  if(data.type == 'error')
-                  {
-                    console.log("ERROR");
-                      //output = '<div class="error">'+data.text+'</div>';
-                      document.getElementById("msuccess")?.classList.add("d-none");
-                      document.getElementById("merror")?.classList.remove("d-none");
-                  }else{
-                      console.log("SUCCESS");
-                      document.getElementById("msuccess")?.classList.remove("d-none");
-                      document.getElementById("merror")?.classList.add("d-none");
-                      document.getElementById("contact")?.classList.add("d-none");
-                      //$('input[type=text]').val(''); 
-                      //$('#contactform textarea').val(''); 
-                  }
-                  //$("#result").hide().html(output).slideDown();           
-              }
-          });
+      if (valid) {
+        console.log("Valid");
+        event.preventDefault();
+
+        let datas = $("#contact").serialize();
+        let URL = $("#contact").attr("action");
+
+        console.log("POST", URL, datas);
+        $.ajax({
+          type: 'post',
+          url: URL,
+          dataType: 'json',
+          data: datas,
+          beforeSend: function() {
+            console.log("BEFORE");
+            $('#submit').attr('disabled', true);
+            //$('#submit').after('<span class="wait">&nbsp;<img src="image/loading.gif" alt="" /></span>');
+          },
+          complete: function() {
+            console.log("COMPLETE");
+            $('#submit').attr('disabled', false);
+            //$('.wait').remove();
+          },
+          success: function(data) {
+            if (data.type == 'error') {
+              console.log("ERROR");
+              document.getElementById("msuccess")?.classList.add("d-none");
+              document.getElementById("merror")?.classList.remove("d-none");
+            } else {
+              console.log("SUCCESS");
+              document.getElementById("msuccess")?.classList.remove("d-none");
+              document.getElementById("merror")?.classList.add("d-none");
+              document.getElementById("contact_container")?.classList.add("d-none");
+            }      
+          }
+        });
       }
-      
-      // if (valid) {
-      //   console.log("Valid");
-      //   event.preventDefault();
-      //   let request = new XMLHttpRequest();
-      //   let url = "https://dev.northtexasaikido.com/scripts/submitContact.php";
-      //   request.open("POST", url, true);
-      //   request.setRequestHeader('Content-Type', 'application/json');
-      //   request.setRequestHeader('Accept', 'application/json');
-      //   //request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-      //   //request.setRequestHeader("Content-Type", "multipart/form-data");
-      //   //request.setRequestHeader("Access-Control-Allow-Origin", "*");
-      //   //request.setRequestHeader("Access-Control-Request-Method", "POST");
-      //   request.onreadystatechange = function () {
-      //     if (request.readyState === 4 && request.status === 200) {
-      //       jsonData = JSON.parse(request.response);
-      //       console.log("RESP", jsonData);
-      //     }
-      //     else {
-      //       console.log("ERR");
-      //     }
-      //   };
-      //   let name = document.getElementById("namebmFtZQo=").value;
-      //   let email = document.getElementById("emailZW1haWwK").value;
-      //   let phone = document.getElementById("phonecGhvbmUK").value;
-      //   let comment = document.getElementById("commentY29tbWVudAo=").value;
-      //   let human = document.getElementById("humanaHVtYW4K").value;
-      //   let poohname = document.getElementById("name").value;
-      //   let poohmail = document.getElementById("email").value;
-      //   
-      //   let data = JSON.stringify(
-      //     {
-      //       "testing": false,
-      //       "namebmFtZQo=": name,
-      //       "emailZW1haWwK": email,
-      //       "phonecGhvbmUK": phone,
-      //       "commentY29tbWVudAo=": comment,
-      //       "humanaHVtYW4K": human,
-      //       "name": poohname + "TESTING",
-      //       "email": poohmail,
-      //     }
-      //   );
-      //   console.log("SEND", data);
-      //   request.send(data);
-      // }
     }, false);
   });
-  
 </script>
 
 {{ end }}
