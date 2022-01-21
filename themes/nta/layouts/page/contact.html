@@ -19,7 +19,7 @@
 <hr />
 
 <div class="container dojocho rounded mb-4 mt-4">
-  <form id="contact" class="row g-3 needs-validation" novalidate onsubmit="">
+  <form id="contact" class="row g-3 needs-validation" novalidate action="/scripts/submitContact.php">
     <div class="col-md-4">
       <div class="form-outline">
         <label for="namebmFtZQo=" class="form-label">Name</label>
@@ -91,7 +91,9 @@
   </form>
 </div>
 
-<script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script crossorigin="anonymous">
   window.addEventListener('load', (event) => {
     
     // Set up the fingerprint event
@@ -139,50 +141,91 @@
       }
       form.classList.add('was-validated');
       
-      if (valid) {
-        console.log("Valid");
-        event.preventDefault();
-        let request = new XMLHttpRequest();
-        let url = "https://dev.northtexasaikido.com/scripts/submitContact.php";
-        request.open("POST", url, true);
-        request.setRequestHeader('Content-Type', 'application/json');
-        request.setRequestHeader('Accept', 'application/json');
-        //request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-        //request.setRequestHeader("Content-Type", "multipart/form-data");
-        //request.setRequestHeader("Access-Control-Allow-Origin", "*");
-        //request.setRequestHeader("Access-Control-Request-Method", "POST");
-        request.onreadystatechange = function () {
-          if (request.readyState === 4 && request.status === 200) {
-            jsonData = JSON.parse(request.response);
-            console.log("RESP", jsonData);
-          }
-          else {
-            console.log("ERR");
-          }
-        };
-        let name = document.getElementById("namebmFtZQo=").value;
-        let email = document.getElementById("emailZW1haWwK").value;
-        let phone = document.getElementById("phonecGhvbmUK").value;
-        let comment = document.getElementById("commentY29tbWVudAo=").value;
-        let human = document.getElementById("humanaHVtYW4K").value;
-        let poohname = document.getElementById("name").value;
-        let poohmail = document.getElementById("email").value;
-        
-        let data = JSON.stringify(
-          {
-            "testing": false,
-            "namebmFtZQo=": name,
-            "emailZW1haWwK": email,
-            "phonecGhvbmUK": phone,
-            "commentY29tbWVudAo=": comment,
-            "humanaHVtYW4K": human,
-            "name": poohname + "TESTING",
-            "email": poohmail,
-          }
-        );
-        console.log("SEND", data);
-        request.send(data);
+      
+      if (valid) 
+      {
+          console.log("Valid");
+          event.preventDefault();
+          
+          let datas = $("#contact").serialize();
+          let URL = $("#contact").attr("action");
+          console.log("POST", URL, datas);
+          $.ajax({
+              type: 'post',
+              url: URL, 
+              dataType: 'json',
+              data: datas,
+              beforeSend: function() {
+                  console.log("BEFORE");
+                  //$('#submit').attr('disabled', true);
+                  //$('#submit').after('<span class="wait">&nbsp;<img src="image/loading.gif" alt="" /></span>');
+              },
+              complete: function() {
+                  console.log("COMPLETE");
+                  //$('#submit').attr('disabled', false);
+                  //$('.wait').remove();
+              },  
+              success: function(data)
+              {
+                  if(data.type == 'error')
+                  {
+                    console.log("ERROR");
+                      //output = '<div class="error">'+data.text+'</div>';
+                  }else{
+                      console.log("SUCCESS");
+                      output = '<div class="success">'+data.text+'</div>';
+                      //$('input[type=text]').val(''); 
+                      //$('#contactform textarea').val(''); 
+                  }
+                  //$("#result").hide().html(output).slideDown();           
+              }
+          });
       }
+      
+      // if (valid) {
+      //   console.log("Valid");
+      //   event.preventDefault();
+      //   let request = new XMLHttpRequest();
+      //   let url = "https://dev.northtexasaikido.com/scripts/submitContact.php";
+      //   request.open("POST", url, true);
+      //   request.setRequestHeader('Content-Type', 'application/json');
+      //   request.setRequestHeader('Accept', 'application/json');
+      //   //request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+      //   //request.setRequestHeader("Content-Type", "multipart/form-data");
+      //   //request.setRequestHeader("Access-Control-Allow-Origin", "*");
+      //   //request.setRequestHeader("Access-Control-Request-Method", "POST");
+      //   request.onreadystatechange = function () {
+      //     if (request.readyState === 4 && request.status === 200) {
+      //       jsonData = JSON.parse(request.response);
+      //       console.log("RESP", jsonData);
+      //     }
+      //     else {
+      //       console.log("ERR");
+      //     }
+      //   };
+      //   let name = document.getElementById("namebmFtZQo=").value;
+      //   let email = document.getElementById("emailZW1haWwK").value;
+      //   let phone = document.getElementById("phonecGhvbmUK").value;
+      //   let comment = document.getElementById("commentY29tbWVudAo=").value;
+      //   let human = document.getElementById("humanaHVtYW4K").value;
+      //   let poohname = document.getElementById("name").value;
+      //   let poohmail = document.getElementById("email").value;
+      //   
+      //   let data = JSON.stringify(
+      //     {
+      //       "testing": false,
+      //       "namebmFtZQo=": name,
+      //       "emailZW1haWwK": email,
+      //       "phonecGhvbmUK": phone,
+      //       "commentY29tbWVudAo=": comment,
+      //       "humanaHVtYW4K": human,
+      //       "name": poohname + "TESTING",
+      //       "email": poohmail,
+      //     }
+      //   );
+      //   console.log("SEND", data);
+      //   request.send(data);
+      // }
     }, false);
   });
   
