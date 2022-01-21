@@ -153,6 +153,10 @@
             jsonData = JSON.parse(request.response);
             console.log("RESP", jsonData);
           }
+          else {
+            jsonData = JSON.parse(request.response);
+            console.log("ERR", jsonData);
+          }
         };
         let name = document.getElementById("namebmFtZQo=").value;
         let email = document.getElementById("emailZW1haWwK").value;
