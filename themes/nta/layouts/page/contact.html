@@ -89,7 +89,7 @@
     <input class="pooh d-none" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
 
   </form>
-  <div id="error" class="row mt-4 d-none">
+  <div id="merror" class="row mt-4 d-none">
     <div class="col">
       <div class="alert alert-danger">
         There was an error submitting your information. Please try again later.
@@ -98,7 +98,7 @@
   </div>
   
   
-  <div id="success" class="row mt-4 d-none">
+  <div id="msuccess" class="row mt-4 d-none">
     <div class="col">
       <div class="alert alert-success">
         Your information was submitted. Someone from the dojo will contact you within two days.
@@ -114,8 +114,8 @@
 <script crossorigin="anonymous">
   window.addEventListener('load', (event) => {
     
-    document.getElementById("error")?.classList.add("d-none");
-    document.getElementById("success")?.classList.add("d-none");
+    document.getElementById("merror")?.classList.add("d-none");
+    document.getElementById("msuccess")?.classList.add("d-none");
     
     // Set up the fingerprint event
     let fingerprint = document.getElementById("b_humanaHVtYW4K");
@@ -193,11 +193,13 @@
                   {
                     console.log("ERROR");
                       //output = '<div class="error">'+data.text+'</div>';
-                      $("#error").removeClass("d-none");
+                      document.getElementById("msuccess")?.classList.add("d-none");
+                      document.getElementById("merror")?.classList.remove("d-none");
                   }else{
                       console.log("SUCCESS");
-                      $('#contact').addClass("d-none");
-                      $('#succecss').removeClass("d-none");
+                      document.getElementById("msuccess")?.classList.remove("d-none");
+                      document.getElementById("merror")?.classList.add("d-none");
+                      document.getElementById("contact")?.classList.add("d-none");
                       //$('input[type=text]').val(''); 
                       //$('#contactform textarea').val(''); 
                   }
