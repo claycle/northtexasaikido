@@ -145,8 +145,8 @@
         let request = new XMLHttpRequest();
         let url = "https://dev.northtexasaikido.com/scripts/submitContact.php";
         request.open("POST", url, true);
-        request.setRequestHeader("Content-Type", "multipart/form-data;charset=UTF-8");
-        request.setRequestHeader("Access-Control-Allow-Origin", "*");
+        request.setRequestHeader("Content-Type", "multipart/form-data");
+        //request.setRequestHeader("Access-Control-Allow-Origin", "*");
         //request.setRequestHeader("Access-Control-Request-Method", "POST");
         request.onreadystatechange = function () {
           if (request.readyState === 4 && request.status === 200) {
