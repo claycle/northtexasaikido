@@ -5,11 +5,17 @@
     
     {{ template "_internal/opengraph.html" . }}
     
-    <title>{{ .Title }} - {{.Site.Title}}</title>
+    <title>
+    {{- if eq .Title .Site.Title }}
+    {{- .Title -}}
+    {{ else }}
+    {{- .Title }} - {{.Site.Title -}}
+    {{ end -}}
+    </title>
     
     <meta charset="utf-8">
-    <meta name="description" content="North Texas Aikido - Aikido on the Texas Prairie - Aikido for the Dallas Area" />
-    <meta name="keywords" content="aikido,dojo,martial arts,exercise,health,fitness,dallas,plano,mckinney,texas,texas,dfw">
+    <meta name="description" content="{{ .Site.Params.homepage_meta_tags.meta_description }}" />
+    <meta name="keywords" content="{{ .Site.Params.homepage_meta_tags.meta_keywords }}">
     <meta name="dc.relation" content="{{ .Site.BaseURL }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#1A94D2" />
