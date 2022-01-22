@@ -1,8 +1,9 @@
 ---
+draft: true
 title: '{{ replace .Name "-" " " | title }}'
 description: Description of '{{ replace .Name "-" " " | title }}'
+date: {{ .Date }}
 subtitle: ''
-draft: false
 nocover: false
 menu:
   main:
