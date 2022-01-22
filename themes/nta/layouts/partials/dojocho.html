@@ -6,6 +6,7 @@
 {{ with .Resources.GetMatch "dojocho.txt"}}
     {{ if .Content }}
     {{ $content = .Content }}
+    {{ $f := os.Stat "dojocho.txt" }}
     <div class="container shadow mt-4 roundoff dojocho">
         <div class="row">
             <div class="col">
@@ -18,6 +19,9 @@
                     <img style="max-width: 20%;" class="dojocho roundoff float-start me-4 mb-2" src="{{ $dcimg }}" alt="Dojo Cho">
                     <div>                    
                         {{ $content | markdownify }}
+                    </div>
+                    <div class="text-end text-small">
+                        Posted {{ $f.ModTime | time.Format ":date_long" }}
                     </div>
                 </div>
                 <div class="dojocho signature text-end mt-2">
