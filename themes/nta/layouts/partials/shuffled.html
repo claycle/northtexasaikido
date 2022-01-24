@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Images</h1>
+            
+{{ range resources.Match "xshuffle/*" }}
+  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+{{ end }}
+
+        </div>
+    </div>
+</div>

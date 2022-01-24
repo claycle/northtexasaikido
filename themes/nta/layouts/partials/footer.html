@@ -43,8 +43,9 @@
 {{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
 <script src="{{$js.RelPermalink}}" defer></script>
 
-{{ $js := resources.Get "js/shuffle.js" | js.Build}}
+{{ $js := resources.Get "js/secret.js" | js.Build }}
 <script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>
 
-{{ $js := resources.Get "js/secret.js" | js.Build}}
+{{ $jsx := resources.Get "js/shuffle.js" }}
+{{ $js := $jsx | resources.ExecuteAsTemplate "js/shuffle.js" . | js.Build }}
 <script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>

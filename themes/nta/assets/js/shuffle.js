@@ -1,6 +1,7 @@
 window.addEventListener('load', (event) => {
     console.log('shuffle.js Copyright (c) 2022 claycle.com');
     var startProductBarPos = -1;
+    console.log("Today: {{ .Date }}, Title {{ site.Title }}");
 });
 
 window.addEventListener('load', (event) => {
@@ -27,6 +28,12 @@ window.addEventListener('load', (event) => {
         "/image/shuffle/RASKF1x1500w.jpg",
         "/image/shuffle/Throw 1x1 500w.jpg"
     ];
+    
+    let odeck = [];
+    //odeck.push("{{ .Date }}");
+    {{ range resources.Match "/image/shuffle/*" }}
+    images.push("{{ .RelPermalink }}");
+    {{ end }}
     let shuffled = [];
     
     // function shuffleArray(arr) {
