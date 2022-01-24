@@ -1,7 +1,7 @@
 ---
 title: Contact the Dojo
 description: "Contact North Texas Aikido"
-subtitle: We want to hear from you
+subheading: We want to hear from you
 draft: false
 nocover: false
 layout: contact
@@ -9,7 +9,7 @@ menu:
   main:
     identifier: contact
     name: Contact
-    weight: 500
+    weight: 900
     parent: ''
 
 ---

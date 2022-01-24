@@ -2,7 +2,7 @@
 title: Dues
 description: "North Texas Aikido dues for students"
 alttitle: Aikido Classes
-subtitle: 'dues'
+subheading: 'dues'
 draft: false
 nocover: false
 layout: dues

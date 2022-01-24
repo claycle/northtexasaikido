@@ -1,7 +1,7 @@
 +++
 title = "About North Texas Aikido"
 description = "About North Texas Aikido"
-subtitle = ""
+subheading = ""
 draft = false
 nocover = false
 

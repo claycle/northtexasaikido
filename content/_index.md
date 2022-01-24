@@ -3,7 +3,7 @@ title: "North Texas Aikido"
 description: "North Texas Aikido - Aikido on the Texas Prairie - Home Page"
 alttitle: "North Texas Aikido"
 smallhero: true
-subtitle: Aikido on the Texas Prairie
+subheading: Aikido on the Texas Prairie
 draft: false
 showmon: true
 ---
