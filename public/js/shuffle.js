@@ -3,30 +3,27 @@
   window.addEventListener("load", (event) => {
     console.log("shuffle.js Copyright (c) 2022 claycle.com");
     var startProductBarPos = -1;
-    console.log("Today: 0001-01-01 00:00:00 +0000 UTC, Title North Texas Aikido");
   });
   window.addEventListener("load", (event) => {
     let elements = document.querySelectorAll("[data-shuffle]");
-    const deck = [
-      "/image/shuffle/Bokken 1x1 500w.jpg",
-      "/image/shuffle/Dojo Seiza 1x1 500w.jpg",
-      "/image/shuffle/erin fall 1x1 500w.jpg",
-      "/image/shuffle/Jim Bokken 1x1 500w.jpg",
-      "/image/shuffle/Jim Throw 1x1 500w.jpg",
-      "/image/shuffle/Keiko Bokken 1x1 500w.jpg",
-      "/image/shuffle/Keith Award 1x1 500w.jpg",
-      "/image/shuffle/Keith Ian 1x1 500w.jpg",
-      "/image/shuffle/Keith Ian 2 1x1 500w.jpg",
-      "/image/shuffle/Mike S MDKH 1x1 500w.jpg",
-      "/image/shuffle/Nina Award 1x1 500w.jpg",
-      "/image/shuffle/Paden and Mike Sealock 1x1 500w.jpg",
-      "/image/shuffle/Paden Jo 1x1 500w.jpg",
-      "/image/shuffle/RAS KF Bokken 1x1 500w.jpg",
-      "/image/shuffle/RAS Smile Throw 1x1 500w.jpg",
-      "/image/shuffle/RASKF1x1500w.jpg",
-      "/image/shuffle/Throw 1x1 500w.jpg"
-    ];
-    let odeck = [];
+    let deck = [];
+    deck.push("/images/shuffle/Bokken%201x1%20500w.jpg");
+    deck.push("/images/shuffle/Dojo%20Seiza%201x1%20500w.jpg");
+    deck.push("/images/shuffle/Jim%20Bokken%201x1%20500w.jpg");
+    deck.push("/images/shuffle/Jim%20Throw%201x1%20500w.jpg");
+    deck.push("/images/shuffle/Keiko%20Bokken%201x1%20500w.jpg");
+    deck.push("/images/shuffle/Keith%20Award%201x1%20500w.jpg");
+    deck.push("/images/shuffle/Keith%20Ian%201x1%20500w.jpg");
+    deck.push("/images/shuffle/Keith%20Ian%202%201x1%20500w.jpg");
+    deck.push("/images/shuffle/Mike%20S%20MDKH%201x1%20500w.jpg");
+    deck.push("/images/shuffle/Nina%20Award%201x1%20500w.jpg");
+    deck.push("/images/shuffle/Paden%20Jo%201x1%20500w.jpg");
+    deck.push("/images/shuffle/Paden%20and%20Mike%20Sealock%201x1%20500w.jpg");
+    deck.push("/images/shuffle/RAS%20KF%20Bokken%201x1%20500w.jpg");
+    deck.push("/images/shuffle/RAS%20Smile%20Throw%201x1%20500w.jpg");
+    deck.push("/images/shuffle/RASKF1x1500w.jpg");
+    deck.push("/images/shuffle/Throw%201x1%20500w.jpg");
+    deck.push("/images/shuffle/erin%20fall%201x1%20500w.jpg");
     let shuffled = [];
     elements.forEach((el) => {
       if (shuffled.length === 0) {
