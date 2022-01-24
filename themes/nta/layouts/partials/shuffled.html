@@ -3,7 +3,7 @@
         <div class="col">
             <h1>Images</h1>
             
-{{ range resources.Match "xshuffle/*" }}
+{{ range resources.Match "/shuffle/*" }}
   <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
 {{ end }}
 
