@@ -11,6 +11,8 @@ $DBCONFIG_PWD
 $DBCONFIG_HOST
 */
 
+error_reporting(E_ERROR | E_PARSE);	// Only report the worst
+
 require_once "dbconfig.php";
 
 header('Content-Type: application/json; charset=utf-8');
