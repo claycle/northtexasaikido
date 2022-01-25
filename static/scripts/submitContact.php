@@ -2,6 +2,7 @@
 
 /*
 You must manually deploy dbconfig.php - it is not under source control for security reasons.
+
 It must define:
 	
 $DBCONFIG_DBNAME
