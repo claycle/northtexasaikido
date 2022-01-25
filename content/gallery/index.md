@@ -1,7 +1,7 @@
 ---
 cover: /images/1x1.jpg
 layout: gallery
-draft: true
+draft: false
 title: Gallery
 subheading: images of the dojo
 description: A gallery of images from North Texas Aikido
