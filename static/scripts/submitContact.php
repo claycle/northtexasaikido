@@ -1,5 +1,15 @@
 <?php
 
+/*
+You must manually deploy dbconfig.php - it is not under source control for security reasons.
+It must define:
+	
+$DBCONFIG_DBNAME
+$DBCONFIG_USER
+$DBCONFIG_PWD
+$DBCONFIG_HOST
+*/
+
 require_once "dbconfig.php";
 
 header('Content-Type: application/json; charset=utf-8');
