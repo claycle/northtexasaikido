@@ -40,6 +40,7 @@ h6 {
     color: rgba($headings-color, 0.5);
     font-size: smaller;
 }
+
 // Text styles
 .text-small {
     font-size: 0.8rem;
@@ -102,7 +103,7 @@ h6 {
 /* For nav bar effects */
 .stucky {
     /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 0px 0px 8px 4px rgba($nta-dark-blue, 0.75);   
+    box-shadow: 0px 0px 8px 4px rgba($nta-dark-blue, 0.75);
     //border-bottom: 1px solid $nta-dark-brown;
     //background-color: rgba($nta-dark-brown, 0.9);
     transition: box-shadow 0.5s ease-out;
@@ -117,36 +118,40 @@ h6 {
 
 
 .navbar {
-    //box-shadow: 0px 0px 8px 4px rgba($nta-dark-blue, 0.75);    
+    //box-shadow: 0px 0px 8px 4px rgba($nta-dark-blue, 0.75);
 }
 
 .navbar.bg-dark {
     background-color: $nta-dark-blue !important;
 }
 
-ul>li.nav-item.dropdown>ul {
+ul > li.nav-item.dropdown > ul {
     background-color: $nta-blue !important;
 }
 
-ul>li.nav-item.dropdown>ul>li>a {
+ul > li.nav-item.dropdown > ul > li > a {
     color: $white !important;
 }
-ul>li.nav-item.dropdown>ul>li>a:hover {
+
+ul > li.nav-item.dropdown > ul > li > a:hover {
     color: $nta-blue !important;
 }
 
-.navbar-brand>img {
+.navbar-brand > img {
     height: 24px;
     width: auto;
 }
 
 a.navbar-brand {
-    transition: text-shadow 0.5s;
+    transition: filter 0.5s;
+    text-shadow: none;
+    filter: drop-shadow(none);
 }
 
 a.navbar-brand:hover {
-    transition: text-shadow 0.5s;
-    text-shadow: 0px 0px 5px $white;
+    transition: filter 0.5s;
+    text-shadow: none;
+    filter: drop-shadow(0px 0px 3px $white);
 }
 
 .dropdown-divider {
@@ -183,7 +188,7 @@ a.navbar-brand:hover {
     background: linear-gradient(90deg, rgba($nta-dark-brown, 0) 0%, rgba($nta-dark-brown, 1) 50%, rgba($nta-dark-brown, 0) 100%);
 }
 
-#covertitle>h1 {
+#covertitle > h1 {
     margin: 0;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
@@ -222,6 +227,7 @@ a.navbar-brand:hover {
         background: linear-gradient(90deg, rgba($nta-dark-brown, 0) 25%, rgba($nta-dark-brown, 0.75) 50%);
         padding-right: 4rem;
     }
+
     #coversubtitle {
         padding-right: 2rem;
     }
@@ -286,7 +292,7 @@ div.divider {
     }
 }
 
-div.divider>img {
+div.divider > img {
     height: 40px;
     width: auto;
 }
@@ -298,6 +304,7 @@ div.watermark {
     background-size: contain;
     background-position: top right;
 }
+
 div.watermark.left {
     background-position: top left;
 }
@@ -307,7 +314,7 @@ div.watermark.left {
     background-image: url(https://picsum.photos/1050/450);
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vw;  // Make a square on small;
+    height: 100vw; // Make a square on small;
     background-position: center;
     background-size: cover;
 }
@@ -326,6 +333,7 @@ div.watermark.left {
     #midpage {
         height: 42.85714286vw;
     }
+
     #midpage > div {
         width: 40%;
         left: 25%;

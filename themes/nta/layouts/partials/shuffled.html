@@ -3,10 +3,10 @@
         <div class="col">
             <hr>
             <h1>Are There Images Below</h1>
-            
-{{ range resources.Match "shuffle/*" }}
-  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
-{{ end }}
+
+            {{ range resources.Match "shuffle/*" }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+            {{ end }}
 
         </div>
     </div>

@@ -1,38 +1,38 @@
 {{ $dcimg := .Resources.GetMatch "dojocho-image.*" }}
 {{ if not $dcimg }}
-    {{ $dcimg = "https://picsum.photos/200/250"}}
+{{ $dcimg = "https://picsum.photos/200/250"}}
 {{ end }}
 {{ $content := false }}
 {{ with .Resources.GetMatch "dojocho.txt"}}
-    {{ if .Content }}
-    {{ $content = .Content }}
-    {{ $f := os.Stat "dojocho.txt" }}
-    <div class="container shadow mt-4 roundoff dojocho">
-        <div class="row">
-            <div class="col">
-                <h1 class="dojocho text-center text-md-start">From the Dojo Cho</h1>
-            </div>
+{{ if .Content }}
+{{ $content = .Content }}
+{{ $f := os.Stat "dojocho.txt" }}
+<div class="container shadow mt-4 roundoff dojocho">
+    <div class="row">
+        <div class="col">
+            <h1 class="dojocho text-center text-md-start">From the Dojo Cho</h1>
         </div>
-        <div class="row dojocho clearfix">
-            <div class="col">
-                <div class="dojocho content text-start mt-4 lead">
-                    <img style="max-width: 20%;" class="dojocho roundoff float-start me-4 mb-2" src="{{ $dcimg }}" alt="Dojo Cho">
-                    <div>                    
-                        {{ $content | markdownify }}
-                    </div>
-                    <div class="text-end text-small">
-                        Posted {{ $f.ModTime | time.Format ":date_long" }}
-                    </div>
+    </div>
+    <div class="row dojocho clearfix">
+        <div class="col">
+            <div class="dojocho content text-start mt-4 lead">
+                <img style="max-width: 20%;" class="dojocho roundoff float-start me-4 mb-2" src="{{ $dcimg }}" alt="Dojo Cho">
+                <div>
+                    {{ $content | markdownify }}
                 </div>
-                <div class="dojocho signature text-end mt-2">
-                    <h3>Russ Alvey Sensei</h3>
+                <div class="text-end text-small">
+                    Posted {{ $f.ModTime | time.Format ":date_long" }}
                 </div>
+            </div>
+            <div class="dojocho signature text-end mt-2">
+                <h3>Russ Alvey Sensei</h3>
             </div>
         </div>
     </div>
-    {{ end }}
+</div>
+{{ end }}
 {{ end }}
 {{ if $content }}
-    {{ partial "social" . }}
-    {{ partialCached "divider" . }}
+{{ partial "social" . }}
+{{ partialCached "divider" . }}
 {{ end }}

@@ -2,11 +2,11 @@
 
 <div class="container mt-4">
     <div class="row">
-      <div class="col">
-        {{ .Content }}
-      </div>
+        <div class="col">
+            {{ .Content }}
+        </div>
     </div>
-  </div>
+</div>
 
 <div class="container mt-4 mb-4" id="gallery">
     <div class="row" XXXdata-masonry='{"percentPosition": true }'>
@@ -15,24 +15,24 @@
         {{ $mod := 0 }}
         {{ with $headless.Resources.ByType "image" }}
             {{ range . }}
-                {{ $counter = add $counter 1 }}
-                <div class="col col-sm-4 col-md-3 col-lg-2">
-                    {{ $image := . }}
-                    {{ with .Fill "200x200" }}
-                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#img{{ $counter }}">
-                            <img class="img-fluid" src="{{ .RelPermalink }}" Xwidth="{{ .Width }}" Xheight="{{ .Height }}" alt="">
-                        </button>
+            {{ $counter = add $counter 1 }}
+            <div class="col col-sm-4 col-md-3 col-lg-2">
+                {{ $image := . }}
+                {{ with .Fill "200x200" }}
+                <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#img{{ $counter }}">
+                    <img class="img-fluid" src="{{ .RelPermalink }}" Xwidth="{{ .Width }}" Xheight="{{ .Height }}" alt="">
+                </button>
 
-                        <!-- Vertically centered modal -->
-                        <div class="modal fade" id="img{{ $counter }}">
-                            <div class="modal-dialog modal-xl modal-dialog-centered">
-                                <div class="modal-body">
-                                    <img class="img-fluid" src="{{ $image.RelPermalink }}" loading="lazy">
-                                </div>
-                            </div>
+                <!-- Vertically centered modal -->
+                <div class="modal fade" id="img{{ $counter }}">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-body">
+                            <img class="img-fluid" src="{{ $image.RelPermalink }}" loading="lazy">
                         </div>
-                    {{ end }}
+                    </div>
                 </div>
+                {{ end }}
+            </div>
             {{ end }}
         {{ end }}
         {{ if eq $counter 0 }}

@@ -1,8 +1,8 @@
-/* 
-* Navbar Foo 
-* We want to be able to have the navbar "pop" out and stick when scrolled to the top.
-* This requires a little fine control.
-*/
+/*
+ * Navbar Foo
+ * We want to be able to have the navbar "pop" out and stick when scrolled to the top.
+ * This requires a little fine control.
+ */
 
 var startProductBarPos = -1;
 
@@ -16,8 +16,7 @@ function findPosY(obj) {
             obj = obj.offsetParent;
         }
         curtop += obj.offsetTop;
-    }
-    else if (obj.y)
+    } else if (obj.y)
         curtop += obj.y;
     return curtop;
 }
@@ -29,12 +28,12 @@ window.addEventListener('scroll', (event) => {
     //console.log("Scroll Navbar", bar);
     if (startProductBarPos < 0) startProductBarPos = findPosY(bar);
 
-    if (/*pageYOffset*/ scrollY > startProductBarPos) {
+    if ( /*pageYOffset*/ scrollY > startProductBarPos) {
         bar.classList.add('fixed-top');
         bar.classList.add('stucky');
         bar.classList.remove('unstucky');
-       // barc.classList.add('container-fluid');
-       // barc.classList.remove('container');
+        // barc.classList.add('container-fluid');
+        // barc.classList.remove('container');
     } else {
         bar.classList.remove('fixed-top');
         bar.classList.remove('stucky');
