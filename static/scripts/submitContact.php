@@ -4,11 +4,13 @@
 You must manually deploy dbconfig.php - it is not under source control for security reasons.
 
 It must define:
-	
+
 $DBCONFIG_DBNAME
 $DBCONFIG_USER
 $DBCONFIG_PWD
 $DBCONFIG_HOST
+
+see dbconfig.php.example
 */
 
 error_reporting(E_ERROR | E_PARSE);	// Only report the worst
@@ -45,27 +47,27 @@ function humanity() {
 	# Retrieve token from post data with key 'h-captcha-response'.
 	$token = $_POST['h-captcha-response'];
 
-	// Build payload with secret key and token 
-	$data = array( 
+	// Build payload with secret key and token
+	$data = array(
 		'secret' => $SECRETKEY,
 		'sitekey' => $SITEKEY,
-		'response' => $token, 
-		'remoteip' => $_SERVER['REMOTE_ADDR'] 
-	); 
-		
-	// Initialize cURL request 
-	// Make POST request with data payload to hCaptcha API endpoint 
-	$curlConfig = array( 
-		CURLOPT_URL => $VERIFY_URL, 
-		CURLOPT_POST => true, 
-		CURLOPT_RETURNTRANSFER => true, 
-		CURLOPT_POSTFIELDS => $data 
-	); 
-	$ch = curl_init(); 
-	curl_setopt_array($ch, $curlConfig); 
-	$response = curl_exec($ch); 
-	curl_close($ch); 
-	// Parse JSON from response. Check for success or error codes 
+		'response' => $token,
+		'remoteip' => $_SERVER['REMOTE_ADDR']
+	);
+
+	// Initialize cURL request
+	// Make POST request with data payload to hCaptcha API endpoint
+	$curlConfig = array(
+		CURLOPT_URL => $VERIFY_URL,
+		CURLOPT_POST => true,
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_POSTFIELDS => $data
+	);
+	$ch = curl_init();
+	curl_setopt_array($ch, $curlConfig);
+	$response = curl_exec($ch);
+	curl_close($ch);
+	// Parse JSON from response. Check for success or error codes
 	$responseData = json_decode($response);
 	error_log("<== " . json_encode($responseData));
 	// If reCAPTCHA response is INvalid - throw Exception
@@ -165,7 +167,7 @@ try {
 
 		recordInDatabase();
 		sendEmailMessage();
-		
+
 		echo json_encode( [ 'SUCCESS' => 200 ]);
 
 	} else {
