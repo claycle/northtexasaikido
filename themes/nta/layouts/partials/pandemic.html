@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col">
         {{ with .Resources.GetMatch "pandemic.txt"}}
-        {{ .Content | markdownify }}
+        {{ .Content | $.Page.RenderString }}
         {{ end }}
         </div>
     </div>
