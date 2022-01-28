@@ -3,10 +3,9 @@
 {{ $dcimg = "https://picsum.photos/200/250"}}
 {{ end }}
 {{ $content := false }}
-{{ with .Resources.GetMatch "dojocho.txt"}}
-{{ if .Content }}
-{{ $content = .Content }}
-{{ $f := os.Stat "dojocho.txt" }}
+
+{{ $p := site.GetPage "parts" }}
+{{ with $p.Resources.GetMatch "dojocho.md"  }}
 <div class="container shadow mt-4 roundoff dojocho">
     <div class="row">
         <div class="col">
@@ -18,10 +17,10 @@
             <div class="dojocho content text-start mt-4 lead">
                 <img style="max-width: 20%;" class="dojocho roundoff float-start me-4 mb-2" src="{{ $dcimg }}" alt="Dojo Cho">
                 <div>
-                    {{ $content | $.Page.RenderString }}
+                    {{ .Content }}
                 </div>
                 <div class="text-end text-small">
-                    Posted {{ $f.ModTime | time.Format ":date_long" }}
+                    <i>Dated {{ .Params.dated }}</i>
                 </div>
             </div>
             <div class="dojocho signature text-end mt-2">
@@ -30,9 +29,6 @@
         </div>
     </div>
 </div>
-{{ end }}
-{{ end }}
-{{ if $content }}
 {{ partial "social" . }}
 {{ partialCached "divider" . }}
 {{ end }}

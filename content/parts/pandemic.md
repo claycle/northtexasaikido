@@ -1,3 +1,6 @@
+---
+title: Pandemic Training Message
+---
 ## Training During a Pandemic
 
 #### What are the consequences of unrestricted aikido practice if an infectious student participates in class?
