@@ -1,6 +1,6 @@
 ---
 title: Dojo Cho Message
-dated: January 22, 2022
+date: 2022-01-19T14:15:59-06:00
 ---
 ## Return to Daily Schedule
 

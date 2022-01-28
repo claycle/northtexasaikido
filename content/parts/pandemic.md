@@ -1,5 +1,6 @@
 ---
 title: Pandemic Training Message
+date: 2022-01-22T00:14:47-06:00
 ---
 ## Training During a Pandemic
 
