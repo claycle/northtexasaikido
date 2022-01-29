@@ -1,7 +1,7 @@
 ---
 title: Dojo Cho Message
 date: 2022-01-14
-help: >
+help: |
   Be sure to update the date in the frontmatter.
   YAML Reference https://yaml.org/spec/1.2.2/#25-full-length-example
 ---
