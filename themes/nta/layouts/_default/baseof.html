@@ -6,22 +6,21 @@
 <body>
 
     {{ partial "header.html" . }}
-    
+
     {{ partial "navbar.html" . }}
 
     <main>
         <div id="content">
-            
+
             {{ block "main" . }}
             {{ end }}
-            
+
         </div>
     </main>
 
-    {{ partial "debug.html" . }}
-    
     {{ partial "footer.html" . }}
-    
+    {{ partial "debug.html" . }}
+
 </body>
 
 </html>
