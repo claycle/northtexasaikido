@@ -5,8 +5,10 @@
   "main": "index.html",
   "scripts": {
     "server": "hugo server -D --disableFastRender",
+    "watch": "hugo -w",
     "build": "hugo",
-    "clean": "trash ./public/*"
+    "clean": "bash ./clean.sh",
+    "test": "echo 'This is a test.'"
   },
   "author": {
     "name": "Clay Luther",
