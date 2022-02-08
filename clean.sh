@@ -6,7 +6,7 @@
 DIR="./public"
 CMD=""
 if [ -d ${DIR} ]; then
-    eval "which -s xtrash"
+    eval "which -s trash"
     if [ $? -eq 0 ]; then
         CMD="trash ${DIR}/*"
     else
