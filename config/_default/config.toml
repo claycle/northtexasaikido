@@ -28,3 +28,8 @@ target = "assets"
 [[module.mounts]]
 source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 target = "assets/js/bootstrap.bundle.min.js"
+
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = ["lastmod", ":fileModTime", ":default"]
+

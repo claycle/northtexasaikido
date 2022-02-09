@@ -1,6 +1,8 @@
 ---
-title: Pandemic Training Message
-date: 2022-01-22T00:14:47-06:00
+comment: Included in home page if $.Param "show_pandemic"
+_build:
+    list: false
+    render: false
 ---
 ## Training During a Pandemic
 

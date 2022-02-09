@@ -1,10 +1,11 @@
-{{ $p := site.GetPage "parts" }}
-{{ with $p.Resources.GetMatch "pandemic.md"  }}
-<div class="container shadow mt-4 dojocho roundoff-reversed">
-    <div class="row">
-        <div class="col">
-            {{ .Content }}
+{{ if $.Param "show_pandemic" }}
+    {{ with site.GetPage "pandemic-section" }}
+    <div class="container shadow mt-4 dojocho roundoff-reversed">
+        <div class="row">
+            <div class="col">
+                {{ .Content }}
+            </div>
         </div>
     </div>
-</div>
+    {{ end }}
 {{ end }}
