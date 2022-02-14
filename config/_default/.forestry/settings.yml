@@ -20,7 +20,7 @@ file_template: ":filename:-:year::month::day:"
 build:
   preview_env:
   - HUGO_ENV=staging
-  - HUGO_VERSION=v0.92.2+extended
+  - HUGO_VERSION=v0.92.2
   preview_output_directory: public
   preview_docker_image: forestryio/hugo:node16
   mount_path: "/srv"
