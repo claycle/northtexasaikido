@@ -7,8 +7,6 @@ sections:
 - type: document
   path: " content/dojo-cho-section.md"
   label: Dojo Cho Message
-  match: "**/*"
-  read_only: false
 - type: directory
   path: config/_default/content
   label: Pages
@@ -18,7 +16,7 @@ upload_dir: config/_default/static/uploads
 public_path: "/uploads"
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ":filename:"
+file_template: ":filename:-:year::month::day:"
 build:
   preview_env:
   - HUGO_ENV=staging
