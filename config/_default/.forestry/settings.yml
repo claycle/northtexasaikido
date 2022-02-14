@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: " content/dojo-cho-section.md"
+  label: Dojo Cho Message
+  match: "**/*"
+  read_only: false
 - type: directory
   path: config/_default/content
   label: Pages
