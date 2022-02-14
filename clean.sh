@@ -12,7 +12,6 @@ if [ -d ${DIR} ]; then
     else
         CMD="rm -rf"
     fi
-    echo ${CMD} "${DIR}/*"
     eval ${CMD} "${DIR}/*"
 else
     echo "No $DIR"
