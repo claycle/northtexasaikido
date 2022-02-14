@@ -6,7 +6,7 @@
   "scripts": {
     "server": "hugo server -D --disableFastRender",
     "watch": "hugo -w",
-    "build": "hugo",
+    "build": "hugo --cleanDestinationDir",
     "clean": "bash ./clean.sh",
     "test": "echo 'This is a test.'"
   },

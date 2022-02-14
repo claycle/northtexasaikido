@@ -8,11 +8,12 @@ CMD=""
 if [ -d ${DIR} ]; then
     eval "which -s trash"
     if [ $? -eq 0 ]; then
-        CMD="trash ${DIR}/*"
+        CMD="trash"
     else
-        CMD="rm -rf ${DIR}/*"
+        CMD="rm -rf"
     fi
-    eval ${CMD}
+    echo ${CMD} "${DIR}/*"
+    eval ${CMD} "${DIR}/*"
 else
     echo "No $DIR"
 fi
