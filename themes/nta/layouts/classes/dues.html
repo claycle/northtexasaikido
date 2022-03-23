@@ -28,6 +28,11 @@
                         <div>
                             {{ .description | markdownify }}
                         </div>
+                        {{ if .link }}
+                        <div class="text-center p-3 fs-4">
+                            <a href="{{ .link }}">Subscribe</a>
+                        </div>
+                        {{ end }}
                     </div>
                 </div>
             </div>
