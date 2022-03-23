@@ -33,4 +33,11 @@ name = "-"
 weight = 1000
 parent = "classes"
 
+[[main]]
+identifer = "supportus"
+name = "Support the Dojo"
+parent = "about"
+url = "/#supportus"
+weight = 300
+pre = '<i class="fad fa-hand-holding-seedling"></i>'
 
