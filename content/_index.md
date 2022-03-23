@@ -8,7 +8,7 @@ draft: false
 showmon: true
 cascade:
     show:
-        seminar: false
+        seminar: true
         pandemic: true
 ---
 
