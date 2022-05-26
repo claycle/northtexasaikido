@@ -1,9 +1,7 @@
 {{ define "main" }}
-
+{{ partial "welcome" . }}
 {{ partial "seminar" . }}
-
 {{ partial "dojocho" . }}
-
 {{ partial "lasttweet" . }}
 {{ partialCached "social" . }}
 {{ partialCached "divider" . }}
