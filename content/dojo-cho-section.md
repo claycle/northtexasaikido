@@ -4,10 +4,8 @@ _build:
     list: false
     render: false
 ---
-## 2022 Trash-Off
+## Thank You, Patricia Hendricks Shihan
 
-Roadside Trash Pick-up This Saturday. It’s time to tidy up our adopted stretch of roadway and serve our local community in this state-wide effort to clean up Texas roadways.
+North Texas Aikido would like to thank Patricia Hendricks Shihan of [Aikido of San Leandro](https://www.aikido-sanleandro.com) for the instruction and fellowship during her recent seminar at the dojo.
 
-Meet at the Dojo at 8:30 for a 9am start. Bring gloves, hats, water, boots, sunblock and bug-spray. Friends and Family are welcome and encouraged to join in!
-
-*There will be no Saturday AM Weapons Class*.
+Classes are back on our [regular schedule](/classes/schedule/).
