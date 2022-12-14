@@ -9,7 +9,7 @@ showmon: true
 cascade:
     show:
         dojocho: false
-        pandemic: true
+        pandemic: false
         seminar: false
         welcome: true
 ---
