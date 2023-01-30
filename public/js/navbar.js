@@ -23,7 +23,10 @@
     }
     if (startProductBarPos < 0)
       startProductBarPos = findPosY(bar);
-    if (scrollY > startProductBarPos) {
+    if (
+      /*pageYOffset*/
+      scrollY > startProductBarPos
+    ) {
       bar.classList.add("fixed-top");
       bar.classList.add("stucky");
       bar.classList.remove("unstucky");
