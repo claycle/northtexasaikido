@@ -32,7 +32,7 @@ schedule:
 
   - day: Friday
     content: |
-      ##### Advanced Adults
+      ##### Adults
       7:30 PM - 8:30 PM
 
   - day: Saturday
@@ -49,6 +49,6 @@ schedule:
 Class Schedule
 {{< /hmod >}}
 
-The NTA dojo is open for Aikido classes Tuesday through Saturday of every week. Supervised open workout is available on Sundays. The dojo is closed on major holidays.
+The NTA dojo is open for Aikido classes Tuesday through Saturday of every week. The dojo is closed on major holidays.
 
 Visitors are always welcome to observe an Aikido class.
