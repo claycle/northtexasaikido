@@ -8,7 +8,7 @@ enableEmoji = true
 enableGitInfo = true
 enableRobotsTXT = true
 
-googleAnalytics = "UA-114931239-3"
+# googleAnalytics = "UA-114931239-3"
 
 [params]
     description = 'North Texas Aikido - Aikido on the Texas Prairie'
