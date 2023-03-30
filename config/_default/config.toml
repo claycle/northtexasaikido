@@ -8,6 +8,7 @@ enableEmoji = true
 enableGitInfo = true
 enableRobotsTXT = true
 
+# Removing this because it's "evil"
 # googleAnalytics = "UA-114931239-3"
 
 [params]
