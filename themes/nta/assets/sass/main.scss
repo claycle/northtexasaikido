@@ -8,9 +8,12 @@
 /* Place any default overrides here before importing bootstrap */
 @import "defaults";
 
+
 /* Import the rest of bootstrap pieces */
 @import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/variables-dark";
 @import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/maps";	/* new in 5.2 */
 @import "node_modules/bootstrap/scss/utilities";
 @import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";

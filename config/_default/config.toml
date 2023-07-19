@@ -12,7 +12,7 @@ enableRobotsTXT = true
 # googleAnalytics = "UA-114931239-3"
 
 [params]
-    description = 'North Texas Aikido - Aikido on the Texas Prairie'
+description = 'North Texas Aikido - Aikido on the Texas Prairie'
 
 [params.homepage_meta_tags]
 meta_description = "North Texas Aikido - Aikido on the Texas Prairie"
