@@ -2,8 +2,8 @@
 {{ partial "welcome" . }}
 {{ partial "seminar" . }}
 {{ partial "dojocho" . }}
-{{ partial "lasttweet" . }}
-{{ partialCached "social" . }}
+{{/* {{ partial "lasttweet" . }} */}}
+{{/* {{ partialCached "social" . }} */}}
 {{ partialCached "divider" . }}
 
 
@@ -143,9 +143,11 @@
     </div>
 </div>
 
+{{/*
 {{ partialCached "divider" . }}
 {{ partial "twitterfeed" . }}
 {{ partialCached "social" . }}
+*/}}
 
 {{ partialCached "divider" . }}
 
