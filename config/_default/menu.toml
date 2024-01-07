@@ -13,13 +13,13 @@ parent = "about"
 url = "/#directions"
 pre = '<i class="fad fa-directions"></i>'
 
-[[main]]
-identifier = "latestnews"
-name = "Latest News"
-weight = 200
-parent = "about"
-url = "/#news"
-pre = '<i class="fab fa-twitter"></i>'
+#[[main]]
+#identifier = "latestnews"
+#name = "Latest News"
+#weight = 200
+#parent = "about"
+#url = "/#news"
+#pre = '<i class="fab fa-twitter"></i>'
 
 [[main]]
 identifier = "aboutrule01"

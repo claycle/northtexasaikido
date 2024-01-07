@@ -8,7 +8,7 @@
     "watch": "hugo -w",
     "build": "hugo --cleanDestinationDir",
     "clean": "bash ./clean.sh",
-    "test": "echo 'This is a test.'"
+    "test": "echo 'This is a test!'"
   },
   "author": {
     "name": "Clay Luther",
