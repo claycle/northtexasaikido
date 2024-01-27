@@ -1,13 +1,14 @@
 ---
-title: Spring Seminar 2023
+title: Spring Seminar 2024
 comment: Included in home page if $.Param "cascade.show.seminar"
 _build:
     list: false
     render: false
 ---
-## Patricia Hendricks Shihan
+## Patricia Hendricks Shihan  
+#### 7th Dan
 
-[Patricia Hendricks Shihan](https://www.aikido-sanleandro.com/patricia-hendricks-shihan/) returns to North Texas Aikido for a full weekend of outstanding instruction **Saturday and Sunday, March 25th and 26th, 2023**. Don’t miss this opportunity to deepen your understanding of Aikido under this world-renowned master instructor.
+[Patricia Hendricks Shihan](https://www.aikido-sanleandro.com/patricia-hendricks-shihan/) returns to North Texas Aikido for a full weekend of outstanding instruction **Saturday and Sunday, April 7th and 7th, 2024**. Don’t miss this opportunity to deepen your understanding of Aikido under this world-renowned master instructor.
 
 Register online for the seminar now. Fees are $130/person for both Saturday and Sunday, or $90/person for either Saturday or Sunday.
 
@@ -17,4 +18,10 @@ Please plan to arrive [at the dojo](/#directions) at 9AM each day. The seminar w
 
 On Saturday, there will be a pot luck meal after the last seminar session.
 
+<div style="background-color: beige; padding: 1em;" class="rounded">
+North Texas is in the direct path for best viewing of the eclipse. Stay an extra day to enjoy the view.
+</div>
+
+<!--
 <a class="btn btn-primary btn-lg mt-3" href="https://checkout.square.site/buy/ZJYYRNR7PP453RX3ZFJKTEXA">Register Now</a>
+-->
