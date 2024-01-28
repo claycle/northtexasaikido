@@ -1,6 +1,7 @@
 #! /bin/bash
 # A simple script to either run the trash command line (macos, added via Macports or Brew)
 # or just rely on rm -rf
+# The old fashioned way of brave sysadmins.
 
 
 DIR="./public"
