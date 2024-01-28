@@ -1,11 +1,7 @@
 #! /bin/bash
 # A simple script to either run the trash command line (macos, added via Macports or Brew)
 # or just rely on rm -rf
-<<<<<<< HEAD
-# The old fashioned way of brave sysadmins.
-=======
-# Testing commit.
->>>>>>> main
+# Removed commit stuff.
 
 
 DIR="./public"
