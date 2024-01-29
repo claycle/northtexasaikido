@@ -22,6 +22,11 @@ On Saturday, there will be a pot luck meal after the last seminar session.
 North Texas is in the direct path for best viewing of the eclipse. Stay an extra day to enjoy the view.
 </div>
 
-<!--
-<a class="btn btn-primary btn-lg mt-3" href="https://checkout.square.site/buy/ZJYYRNR7PP453RX3ZFJKTEXA">Register Now</a>
--->
+<div style="margin-top: 2em; margin-bottom: 2em;">
+<a class="btn btn-primary btn-lg mt-3" href="https://square.link/u/uIWKAkUC">Register Now</a>
+</div>
+<div style="margin-top: 2em; margin-bottom: 2em;">
+<img src="phs24-checkout-link-qr-code.png" />
+</div>
+
+**IMPORTANT**! Please [download](/release-forms/NTA-Pat%20Sensei%202024%20Seminar%20Flyer.pdf), fill-in, and sign the release form before arriving at the dojo.
