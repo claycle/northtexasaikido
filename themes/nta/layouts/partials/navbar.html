@@ -20,7 +20,7 @@
                             {{ .Pre }} {{ .Name }} {{ .Post }}
                         </a>
     
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                             {{ range .Children }}
                             {{ if eq .Name "-" }}
                                 <li><hr class="dropdown-divider"></li>
