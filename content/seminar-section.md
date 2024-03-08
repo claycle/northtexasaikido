@@ -19,8 +19,7 @@ Please plan to arrive [at the dojo](/#directions) at 9AM each day. The seminar w
 On Saturday, there will be a pot luck meal after the last seminar session.
 
 <div style="background-color: beige; padding: 1em;" class="rounded">
-North Texas is in the direct path for best viewing of the eclipse. Stay an extra day to enjoy the view.
-</div>
+Because of the eclipse driving up prices for flights and hotels in April, we have moved the seminar to May 11-12, 2024.</div>
 
 <div style="margin-top: 2em; margin-bottom: 2em;">
 <a class="btn btn-primary btn-lg mt-3" href="https://square.link/u/uIWKAkUC">Register Now</a>
