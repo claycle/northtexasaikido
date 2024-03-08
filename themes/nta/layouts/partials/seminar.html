@@ -30,8 +30,8 @@
                 {{ .Content }}
             </div>
         </div>
-        {{/* $imgs := $page.Resources.Match "seminar-image-*.{webp,jpg,png}" */}}
-        {{ $imgs := $page.Resources.Match "seminar-bumper-2024-*.{webp,jpg,png}" }}
+        {{ $imgs := $page.Resources.Match "seminar-image-*.{webp,jpg,png}" }}
+        {{/* $imgs := $page.Resources.Match "seminar-bumper-2024-*.{webp,jpg,png}" */}}
         {{ with $imgs }}
         <div class="row mt-3">
             {{ range . }}
