@@ -8,7 +8,7 @@ _build:
 ## Patricia Hendricks Shihan  
 #### 7th Dan
 
-[Patricia Hendricks Shihan](https://www.aikido-sanleandro.com/patricia-hendricks-shihan/) returns to North Texas Aikido for a full weekend of outstanding instruction **Saturday and Sunday, April 6th and 7th, 2024**. Don’t miss this opportunity to deepen your understanding of Aikido under this world-renowned master instructor.
+[Patricia Hendricks Shihan](https://www.aikido-sanleandro.com/patricia-hendricks-shihan/) returns to North Texas Aikido for a full weekend of outstanding instruction **Saturday and Sunday, May 11th and 12th, 2024** (rescheduled!). Don’t miss this opportunity to deepen your understanding of Aikido under this world-renowned master instructor.
 
 Register online for the seminar now. Fees are $130/person for both Saturday and Sunday, or $90/person for either Saturday or Sunday.
 

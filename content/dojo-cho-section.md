@@ -4,7 +4,6 @@ _build:
     list: false
     render: false
 ---
-## Promotion Potluck Party, Saturday March 2
+## Pat Hendricks Shihan Seminar Rescheduled
 
-We will be having a promotion party and potluck lunch Saturday, March 2, following morning classes (about 11:30 AM). Bring food, family, and friends to the dojo to celebrate.
-
+The 2024 Pat Hendricks Shihan Seminar is getting rescheduled to the weekend of May 11-12, due to the extreme price hikes on airfare/hotels in the area for the Eclipse. We apologize for the inconvenience and any disappointment this may cause. If you are pre-registered and need to cancel or need a refund, please call the Dojo at 972-390-9600.
