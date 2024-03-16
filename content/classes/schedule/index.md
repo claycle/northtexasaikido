@@ -39,6 +39,8 @@ schedule:
     content: |
       ##### Weapons Workshop
       9 AM - 10 AM
+      ##### Kids
+      11:30 AM - 12:30 PM
 
   - day: Sunday
     content: |
