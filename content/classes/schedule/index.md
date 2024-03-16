@@ -17,6 +17,8 @@ menu:
 schedule:
   - day: Tuesday
     content: |
+      ##### Kids
+      6 PM - 7 PM
       ##### Adults
       7:30 PM - 8:30 PM
 
