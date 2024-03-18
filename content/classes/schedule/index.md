@@ -39,8 +39,10 @@ schedule:
 
   - day: Saturday
     content: |
-      ##### Weapons Workshop
+      ##### Adults
       9 AM - 10 AM
+      ##### Weapons Workshop
+      10:15 AM - 11:15 AM
       ##### Kids
       11:30 AM - 12:30 PM
 
