@@ -15,22 +15,10 @@ menu:
     pre: '<i class="fad fa-clock"></i>'
 
 schedule:
-  - day: Tuesday
-    content: |
-      ##### Adults
-      7:30 PM - 8:30 PM
-
-  - day: Wednesday
-    content: |
-      ##### Adults
-      7:30 PM - 8:30 PM
-
   - day: Thursday
     content: |
       ##### Kids
       6 PM - 7 PM
-      ##### Adults
-      7:30 PM - 8:30 PM
 
   - day: Friday
     content: |
@@ -46,15 +34,12 @@ schedule:
       ##### Kids
       11:30 AM - 12:30 PM
 
-  - day: Sunday
-    content: |
-      *No classes at this time.*
 
 ---
 {{< hmod >}}
 Class Schedule
 {{< /hmod >}}
 
-The NTA dojo is open for Aikido classes Tuesday through Saturday of every week. The dojo is closed on major holidays.
+The NTA dojo is open for Aikido classes Thursday through Saturday of every week. The dojo is closed on major holidays.
 
 Visitors are always welcome to observe an Aikido class.
