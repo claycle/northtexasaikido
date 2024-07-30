@@ -2,8 +2,7 @@
   // <stdin>
   var startProductBarPos = -1;
   function findPosY(obj) {
-    if (!obj)
-      return 0;
+    if (!obj) return 0;
     var curtop = 0;
     if (obj.offsetParent) {
       while (obj.offsetParent) {
@@ -21,8 +20,7 @@
       console.log("thenavbar not assigned");
       return;
     }
-    if (startProductBarPos < 0)
-      startProductBarPos = findPosY(bar);
+    if (startProductBarPos < 0) startProductBarPos = findPosY(bar);
     if (
       /*pageYOffset*/
       scrollY > startProductBarPos
