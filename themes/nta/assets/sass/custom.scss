@@ -1,0 +1,378 @@
+// Link Styles
+a {
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+a:hover {
+    transition: color 0.5s;
+}
+
+a.gold {
+    color: $nta-heather;
+}
+
+a.gold:hover {
+    color: darken($nta-heather, $link-shade-percentage);
+}
+
+// Header Styles
+h1,
+h2,
+h3 {
+    letter-spacing: 0.5rem;
+    font-variant: small-caps;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h4,
+h5,
+h6 {
+    letter-spacing: 0.25rem;
+}
+
+.subheader {
+    font-family: $font-family-sans-serif;
+    text-transform: lowercase;
+    color: rgba($headings-color, 0.5);
+    font-size: smaller;
+}
+
+// Text styles
+.text-small {
+    font-size: 0.8rem;
+}
+
+.text-smaller {
+    font-size: 0.6rem;
+}
+
+.text-smallest {
+    font-size: 0.4rem;
+}
+
+.text-serif {
+    font-family: $font-family-serif;
+}
+
+.text-spacing-25 {
+    letter-spacing: 0.25rem;
+}
+
+.text-spacing-50 {
+    letter-spacing: 0.5rem;
+}
+
+.text-spacing-100 {
+    letter-spacing: 1rem;
+}
+
+// Rounded styles
+.roundedall {
+    border-radius: 0.5rem;
+}
+
+.roundoff {
+    border-radius: 0.5rem;
+}
+
+.roundoff-reversed {
+    border-radius: 0.5rem;
+}
+
+@include media-breakpoint-up(md) {
+    .roundedall {
+        border-radius: 0.5rem;
+    }
+
+    .roundoff {
+        border-radius: 0.5rem 1.5rem;
+    }
+
+    .roundoff-reversed {
+        border-radius: 1.5rem 0.5rem;
+    }
+}
+
+
+// Navbar Styles
+
+/* For nav bar effects */
+.stucky {
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 0px 8px 4px rgba($nta-dark-blue, 0.75);
+    //border-bottom: 1px solid $nta-dark-brown;
+    //background-color: rgba($nta-dark-brown, 0.9);
+    transition: box-shadow 0.5s ease-out;
+}
+
+.unstucky {
+    box-shadow: none;
+    //border-bottom: none;
+    //background-color: rgba($nta-dark-brown, 1);
+    transition: box-shadow 0.5s ease-out;
+}
+
+
+.navbar {
+    //box-shadow: 0px 0px 8px 4px rgba($nta-dark-blue, 0.75);
+}
+
+.navbar.bg-dark {
+    background-color: $nta-dark-blue !important;
+}
+
+ul > li.nav-item.dropdown > ul {
+    background-color: $nta-blue !important;
+}
+
+ul > li.nav-item.dropdown > ul > li > a {
+    color: $white !important;
+}
+
+ul > li.nav-item.dropdown > ul > li > a:hover {
+    color: $nta-blue !important;
+}
+
+.navbar-brand > img {
+    height: 24px;
+    width: auto;
+}
+
+a.navbar-brand {
+    transition: filter 0.5s;
+    text-shadow: none;
+    filter: drop-shadow(none);
+}
+
+a.navbar-brand:hover {
+    transition: filter 0.5s;
+    text-shadow: none;
+    filter: drop-shadow(0px 0px 3px $white);
+}
+
+.dropdown-divider {
+    color: $white;
+}
+
+// Cover Image Styles
+// On small screens, fill screen
+#cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+}
+
+#covermon {
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#covertitle {
+    width: 90vw;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    background: linear-gradient(90deg, rgba($nta-dark-brown, 0) 0%, rgba($nta-dark-brown, 1) 50%, rgba($nta-dark-brown, 0) 100%);
+}
+
+#covertitle > h1 {
+    margin: 0;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    color: $white;
+    text-shadow: 1px 1px 2px $black;
+}
+
+#coversubtitle {
+    margin: 0;
+    color: $white;
+    text-transform: lowercase;
+    letter-spacing: 0.5rem;
+    padding-bottom: 0.25rem;
+    text-shadow: 1px 1px 2px $black;
+}
+
+// On not-small screens, 21x9
+@include media-breakpoint-up(md) {
+    #cover {
+        height: 42.857143vw;
+    }
+
+    #covermon {
+        width: 20vw;
+        top: 5%;
+        left: 15%;
+        transform: translate(-50%, 0);
+    }
+
+    #covertitle {
+        width: 100%;
+        bottom: initial;
+        top: 30vw;
+        transform: translate(-50%, 0%);
+        text-align: right;
+        background: linear-gradient(90deg, rgba($nta-dark-brown, 0) 25%, rgba($nta-dark-brown, 0.75) 50%);
+        padding-right: 4rem;
+    }
+
+    #coversubtitle {
+        padding-right: 2rem;
+    }
+}
+
+// Dojo Cho Message
+
+div.container.dojocho {
+    background-color: rgba($nta-blue, 0.1);
+    //background-color: lighten($nta-blue, 70);
+    padding: 1rem;
+}
+
+div.boxed {
+    background-color: rgba($nta-blue, 0.1);
+    //background-color: lighten($nta-blue, 70);
+    padding: 1rem;
+    padding-bottom: 1rem;
+}
+
+img.dojocho {
+    width: 25%;
+}
+
+div.dojocho.content {
+    //width: 100%;
+    //background-color: green;
+}
+
+@include media-breakpoint-up(md) {
+    img.dojocho {
+        width: 100%;
+    }
+}
+
+// Divider, from https://codepen.io/airen/details/MWWOmEM
+div.divider {
+    color: $nta-dark-brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 100%;
+    }
+
+    &::before {
+        background: linear-gradient(to right, rgba($nta-dark-brown, 0), $nta-dark-brown);
+        margin-right: 0.5rem;
+    }
+
+    &::after {
+        background: linear-gradient(to left, rgba($nta-dark-brown, 0), $nta-dark-brown);
+        margin-left: 0.5rem;
+    }
+}
+
+div.divider > img {
+    height: 40px;
+    width: auto;
+}
+
+// Watermark
+div.watermark {
+    background-image: url("/images/aikido-kanji-10a.png.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+}
+
+div.watermark.left {
+    background-position: top left;
+}
+
+// Midpage Banner
+#midpage {
+    background-image: url(https://picsum.photos/1050/450);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vw; // Make a square on small;
+    background-position: center;
+    background-size: cover;
+}
+
+#midpage > div {
+    background-color: rgba($nta-dark-blue, 0.5);
+    width: 90%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+}
+
+@include media-breakpoint-up(md) {
+    #midpage {
+        height: 42.85714286vw;
+    }
+
+    #midpage > div {
+        width: 40%;
+        left: 25%;
+        top: 75%;
+    }
+}
+
+footer.bg-dark {
+    background-color: $nta-blue !important;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+.bg-darker {
+    background-color: $nta-dark-blue;
+}
+
+.crafted > a {
+    color: darken($white, 25);
+    transition: shadow 0.5s, color 0.5s;
+}
+
+.crafted > a:hover {
+    color: $white;
+    text-shadow: 0px 0px 2px $white;
+    transition: shadow 0.5s, color 0.5s;
+}
+
+.bg-nta-blue {
+    background-color: $nta-blue;
+}
+
+div.dues-amount {
+    background-color: rgba($nta-blue, 0.1);
+}
+
+.zero-opacity {
+    opacity: 0;
+}

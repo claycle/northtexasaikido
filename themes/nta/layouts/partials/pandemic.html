@@ -1,0 +1,11 @@
+{{ if $.Param "cascade.show.pandemic" }}
+    {{ with site.GetPage "pandemic-section" }}
+    <div class="container shadow mt-4 dojocho roundoff-reversed">
+        <div class="row">
+            <div class="col">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+    {{ end }}
+{{ end }}

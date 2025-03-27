@@ -1,0 +1,35 @@
+<head>
+    {{ template "_internal/google_analytics.html" . }}
+
+    {{ template "_internal/twitter_cards.html" . }}
+
+    <meta name="twitter:site" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_site }}">
+    <meta name="twitter:creator" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_creator }}">
+
+    {{ template "_internal/opengraph.html" . }}
+
+    <title>
+        {{- if eq .Title .Site.Title }}
+        {{- .Title -}}
+        {{ else }}
+        {{- .Title }} - {{.Site.Title -}}
+        {{ end -}}
+    </title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="{{ .Site.Params.homepage_meta_tags.meta_description }}" />
+    <meta name="keywords" content="{{ .Site.Params.homepage_meta_tags.meta_keywords }}">
+    <meta name="dc.relation" content="{{ .Site.BaseURL }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#1A94D2" />
+
+    {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
+
+    {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+
+    <link href="/fa5/css/all.css" rel="stylesheet">
+    <!--fontawesome load all styles -->
+</head>

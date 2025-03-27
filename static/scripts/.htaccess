@@ -1,0 +1,11 @@
+# Disable directory browsing 
+Options -Indexes
+
+<Files ~ "dbconfig.php$">
+  Order allow,deny
+  Deny from all
+</Files>
+
+<FilesMatch "\.(php|js)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>

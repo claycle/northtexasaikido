@@ -1,0 +1,54 @@
+<footer>
+    <div class="container-fluid bg-nta-blue pt-2 ps-4 pe-4 mt-4">
+        <div class="row footer-text pt-2 row-cols-1 row-cols-md-2 ps-2 pe-2">
+            <div class="col text-center text-md-start text-white">
+                <h2 class="text-white">{{ $.Site.Title }}</h2>
+                <p class="text-small">A member of the <a class="gold" href="https://ai-ki-do.org">California Aikido Association</a>
+                </p>
+                <p>
+                    Classes every Tuesday thru Saturday<br />
+                    Closed Monday and Wednesday
+                </p>
+                <p>
+                    Visitors are always welcome to observe an Aikido class.<br />
+                    <i class="text-small d-none">We request that visitors bring a mask with them.</i>
+                </p>
+            </div>
+            <div class="col text-center text-md-end">
+                <img class="footer-logo" src="{{ .Param "logo" }}" alt="North Texas Aikido Logo">
+                <p class="text-white mt-2">
+                    2150 East Lucas Road<br />
+                    Allen TX 75002<br />
+                    <a class="gold" href="tel:555-555-5555" data-secret="dGVsOjk3MjM5MDk2MDA=" data-secrettext="OTcyLjM5MC45NjAw">555-555-5555</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-darker">
+        <div class="row footer-text pt-2">
+            <div class="col text-center text-white text-small">
+                {{.Param "copyright" | markdownify }} - <a href="{{ "contact" | relURL }}">Contact</a>
+            </div>
+        </div>
+        <div class="row footer-text pb-2">
+            <div class="col text-center text-white text-smaller">
+                {{ $email := .Param "crafted_email_url" | base64Encode }}
+                <span class="crafted text-spacing-25 text-lowercase"><a href="mailto:a@b.c" data-secret="{{$email}}">crafted by claycle</a></span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript and dependencies -->
+
+{{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
+{{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
+<script src="{{$js.RelPermalink}}" defer></script>
+
+{{ $js := resources.Get "js/secret.js" | js.Build | minify }}
+<script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>
+
+{{ $jsx := resources.Get "js/shuffle.js" }}
+{{ $js := $jsx | resources.ExecuteAsTemplate "js/shuffle.js" . | js.Build | minify }}
+<script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>

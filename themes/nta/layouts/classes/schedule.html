@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row row-cols-2 row-cols-md-3">
+        {{ with .Param "schedule" }}
+        {{ range . }}
+        <div class="col p-2">
+            <div class="card">
+                <img src="#" alt="Class Image" class="card-img-top" data-shuffle>
+                <div class="card-body">
+                    <h4 class="card-title text-center">
+                        {{ .day }}
+                    </h4>
+                    <div class="card-text text-center">
+                        {{ .content | markdownify }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+</div>
+
+{{ end }}

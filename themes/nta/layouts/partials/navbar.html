@@ -1,0 +1,55 @@
+<nav id="thenavbar" aria-describedby=""class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        
+        <a class="navbar-brand" href="{{ .Site.Home.Permalink }}">
+            <img src="{{ .Param "logo" }}" alt="{{ .Site.Title }}" class="d-inline-block align-text-center">
+            {{ .Site.Title }}
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main.ByWeight }}
+                    {{ if .HasChildren }}
+                    <li class="nav-item dropdown">
+                        <a class='nav-link dropdown-toggle  {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active {{ end }}' href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ .Pre }} {{ .Name }} {{ .Post }}
+                        </a>
+    
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            {{ range .Children }}
+                            {{ if eq .Name "-" }}
+                                <li><hr class="dropdown-divider"></li>
+                            {{ else }}
+                                <li>
+                                    <a class='dropdown-item  {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active {{ end }}' href="{{ .URL }}">
+                                        {{ .Pre }} {{ .Name }} {{ .Post }}</a>
+                                </li>
+                            {{ end }}
+                            {{ end }}
+                        </ul>
+                    </li>
+    
+                    {{ else }}
+                    {{ if eq .Name "-" }}
+                        <li><hr class="dropdown-divider"></li>
+                    {{ else }}
+                        <li class="nav-item">
+                            <a class='nav-link {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active {{ end }}' href="{{ absURL .URL }}">
+                                {{ .Pre }} {{ .Name }} {{ .Post }}
+                            </a>
+                        </li>
+                    {{ end }}
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{{ $js := resources.Get "js/navbar.js" | js.Build}}
+<script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>

@@ -1,0 +1,36 @@
+BaseURL = "https://northtexasaikido.com"
+languageCode = "en-us"
+title = "North Texas Aikido"
+theme = "nta"
+
+relativeURLS = true
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+
+# Removing this because it's "evil"
+# googleAnalytics = "UA-114931239-3"
+
+[params]
+description = 'North Texas Aikido - Aikido on the Texas Prairie'
+
+[params.homepage_meta_tags]
+meta_description = "North Texas Aikido - Aikido on the Texas Prairie"
+meta_keywords = "aikido,dojo,martial arts,exercise,health,fitness,dallas,plano,mckinney,richardson,garland,texas,texas,dfw"
+meta_twitter_card = "summary_large_image"
+meta_twitter_site = "@North_TX_Aikido"
+meta_twitter_creator = "@North_TX_Aikido"
+
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+target = "assets/js/bootstrap.bundle.min.js"
+
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = ["lastmod", ":fileModTime", ":default"]
+

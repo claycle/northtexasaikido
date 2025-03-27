@@ -1,0 +1,44 @@
+{{ if not .Params.nocover }}
+{{ $img := .Resources.GetMatch "cover.*" }}
+{{ $img1x1 := .Resources.GetMatch "cover-1x1.*" }}
+<style>
+    #cover {
+        background-image: url({{- if $img }}
+        {{- $img -}}
+        {{ else }}
+        {{- $.Param "cover" -}}
+        {{ end -}});
+    }
+{{ if $img1x1 }}
+    @media (max-width: 767.98px) {
+        #cover {
+            background-image: url({{- $img1x1 -}});
+        }
+    }
+{{ end }}
+</style>
+{{ $mon := $.Param "showmon" }}
+{{ $title := $.Param "alttitle" }}
+{{ if not $title }}
+{{ $title = .Title }}
+{{ end }}
+{{ $subtitle := $.Param "subheading" }}
+<header>
+
+<div id="cover">
+    {{ if $mon }}
+    <div id="covermon">
+        <img src="{{ $.Param "logo" }}" alt="North Texas Aikido">
+    </div>
+    {{ end }}
+    <div id="covertitle">
+        <h1>{{ $title }}</h1>
+        {{ if $subtitle }}
+        <div id="coversubtitle">
+            {{ $subtitle }}
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+</header>

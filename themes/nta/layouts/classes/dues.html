@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row row-cols-2 row-cols-md-3">
+        {{ with .Param "dues" }}
+        {{ range . }}
+        <div class="col p-2">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center mb-2">
+                        {{ .icon | markdownify }}
+                    </div>
+                    <h4 class="card-title text-center">
+                        {{ .title }}
+                    </h4>
+                    <div class="card-text text-center">
+                        <div class="dues-amount rounded fs-2 m-2 p-2">
+                            ${{ .amount }}
+                        </div>
+                        <div>
+                            {{ .description | markdownify }}
+                        </div>
+                        {{ if .link }}
+                        <div class="text-center p-3">
+                            <a class="btn btn-primary" href="{{ .link }}">Subscribe</a>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+    <div class="mt-3">
+        You may also pay dues for a <a href="https://square.link/u/lv2aHH4M">single month online</a>. For automatic monthly payments, please use the appropriate subscribe buttons above.
+    </div>
+</div>
+
+{{ end }}

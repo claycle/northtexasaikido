@@ -1,0 +1,210 @@
+{{ define "main" }}
+
+<!-- Base64  -->
+<!-- email: ZW1haWwK -->
+<!-- name: bmFtZQo= -->
+<!-- phone: cGhvbmUK -->
+<!-- comment: Y29tbWVudAo= -->
+
+{{ $sitekey := "81faee20-2911-41cd-8b4a-71f45b932b8c" }}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+
+<div id="contact_container" class="container dojocho rounded mb-4 mt-4">
+    <form id="contact" class="row g-3 needs-validation" novalidate action="/scripts/submitContact.php">
+        <div class="col-md-4">
+            <div class="form-outline">
+                <label for="namebmFtZQo=" class="form-label">Name</label>
+                <input type="text" class="form-control" id="namebmFtZQo=" name="namebmFtZQo=" value="" required placeholder="Your name" />
+                <div class="invalid-feedback">Please provide your name.</div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="form-outline">
+                <label for="emailZW1haWwK" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailZW1haWwK" name="emailZW1haWwK" value="" placeholder="your@email.com" required autocomplete="email" />
+                <div class="invalid-feedback">Please provide your email.</div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-outline">
+                <label for="phonecGhvbmUK" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phonecGhvbmUK" name="phonecGhvbmUK" value="" placeholder="555-555-5555" required autocomplete="tel" pattern="^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$" />
+                <div class="invalid-feedback">Please provide your phone number.</div>
+            </div>
+        </div>
+
+        <div class="col col-12 text-small">
+            North Texas Aikido respects your privacy and will never share your contact information with another entity.
+        </div>
+
+        <div class="col-12">
+            <div class="form-outline">
+                <label for="commentY29tbWVudAo=" class="form-label">Comment or question</label>
+                <textarea class="form-control" name="commentY29tbWVudAo=" id="commentY29tbWVudAo=" rows="5" required placeholdder="Your question or comment"></textarea>
+                <div class="invalid-feedback">Please provide a comment or question.</div>
+            </div>
+        </div>
+
+        <div id="d_humanaHVtYW4K" class="col-12 d_humanaHVtYW4K" style="transition: opacity 1s;">
+            <div class="form-outline">
+                <div class="boxed rounded">
+                    <div class="row">
+                        <div class="col col-md-10">
+                            <h5 class="mb-0">Are you human?</h5>
+                            Please tap on the <i class="fad fa-fingerprint"></i> to close this box before you send your message.
+                        </div>
+                        <div class="col text-center text-md-end">
+                            <button id="b_humanaHVtYW4K" class="btn b_humanaHVtYW4K" type="button">
+                                <span><i class="fad fa-fingerprint fa-4x"></i></span>
+                            </button>
+                        </div>
+                        <div id="w_humanaHVtYW4K" class="col col-12 mt-2 d-none">
+                            <div class="alert alert-warning">
+                                Please close this box by tapping on the fingerprint.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input autocomplete="off" type="hidden" id="humanaHVtYW4K" name="humanaHVtYW4K" value="" required /></i>
+
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit" id="submit">Send</button>
+        </div>
+
+        <!-- Pooh Bear? -->
+        <label class="pooh d-none" for="name">Your Full Name</label>
+        <input class="pooh d-none" autocomplete="off" type="text" id="name" name="name" placeholder="Your name here">
+        <label class="pooh d-none" for="email">Your Email</label>
+        <input class="pooh d-none" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
+
+    </form>
+</div>
+
+<div class="container">
+    <div id="merror" class="row mt-4 d-none">
+        <div class="col">
+            <div class="alert alert-danger">
+                There was an error submitting your information. Please try again later.
+            </div>
+        </div>
+    </div>
+
+    <div id="msuccess" class="row mt-4 d-none">
+        <div class="col">
+            <div class="alert alert-success">
+                Your information was submitted. Someone from the dojo will contact you within two days.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery simplifies the Ajax post -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script crossorigin="anonymous">
+    window.addEventListener('load', (event) => {
+
+        document.getElementById("merror")?.classList.add("d-none");
+        document.getElementById("msuccess")?.classList.add("d-none");
+
+        // Set up the fingerprint event
+        let fingerprint = document.getElementById("b_humanaHVtYW4K");
+        let fingerbox = document.getElementById("d_humanaHVtYW4K");
+        if (fingerprint && fingerbox) fingerprint.addEventListener("click", (event) => {
+            //console.log("fingerprinted", fingerprint, fingerbox);
+            fingerbox.innerHTML = "<span class='fs-3 text-serif'>Hello, human.</span>";
+            let eok = document.getElementById("humanaHVtYW4K");
+            if (eok) {
+                eok.value = "humanaHVtYW4K";
+                console.log("OK human");
+            }
+
+            setTimeout(function() {
+                fingerbox.classList.add('zero-opacity');
+                setTimeout(function() {
+                    fingerbox.classList.add('d-none');
+                }, 1000, fingerbox);
+            }, 0, fingerbox);
+            fingerbox.classList.add('zero-opacity');
+        });
+
+        // Form Validation
+        let form = document.getElementById("contact");
+        form?.addEventListener("submit", (event) => {
+            let valid = true;
+            if (!form.checkValidity()) {
+                console.log("Invalid");
+                event.preventDefault();
+                event.stopPropagation();
+                valid = false;
+            }
+
+            let eok = document.getElementById("humanaHVtYW4K");
+            if (eok) {
+                if (eok.value != "humanaHVtYW4K") {
+                    console.log("Not human");
+                    event.preventDefault();
+                    event.stopPropagation();
+                    let warn = document.getElementById("w_humanaHVtYW4K");
+                    warn?.classList.remove('d-none');
+                    valid = false;
+                }
+            }
+            form.classList.add('was-validated');
+
+            // If valid, then post
+            if (valid) {
+                console.log("Valid");
+                event.preventDefault();
+
+                let datas = $("#contact").serialize();
+                let URL = $("#contact").attr("action");
+
+                console.log("POST", URL, datas);
+                $.ajax({
+                    type: 'post',
+                    url: URL,
+                    dataType: 'json',
+                    data: datas,
+                    beforeSend: function() {
+                        console.log("BEFORE");
+                        $('#submit').attr('disabled', true);
+                        //$('#submit').after('<span class="wait">&nbsp;<img src="image/loading.gif" alt="" /></span>');
+                    },
+                    complete: function() {
+                        console.log("COMPLETE");
+                        $('#submit').attr('disabled', false);
+                        //$('.wait').remove();
+                    },
+                    success: function(data) {
+                        if (data.type == 'error') {
+                            console.log("ERROR");
+                            document.getElementById("msuccess")?.classList.add("d-none");
+                            document.getElementById("merror")?.classList.remove("d-none");
+                        } else {
+                            console.log("SUCCESS");
+                            document.getElementById("msuccess")?.classList.remove("d-none");
+                            document.getElementById("merror")?.classList.add("d-none");
+                            document.getElementById("contact_container")?.classList.add("d-none");
+                        }
+                    }
+                });
+            }
+        }, false);
+    });
+</script>
+
+{{ end }}

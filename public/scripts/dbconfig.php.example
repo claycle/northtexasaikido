@@ -1,0 +1,5 @@
+<?php
+$DBCONFIG_DBNAME = "sql_database";
+$DBCONFIG_USER = "sql_user";
+$DBCONFIG_PWD = "sql_password";
+$DBCONFIG_HOST = "sql_host.com";

@@ -1,0 +1,21 @@
+{{ if $.Param "cascade.show.welcome" }}
+
+{{ $wimg := .Resources.GetMatch "welcome-image.{webp,jpg,png}" }}
+{{ if not $wimg }}
+    {{ $wimg = "/dojo-sunset.webp"}}
+{{ end }}
+
+<div class="container pt-3 pt-md-5">
+    <div class="row row-cols-1 row-cols-md-2">
+        <div class="col">
+            <img class="w-100 roundoff-reversed" src="{{ $wimg }}">
+        </div>
+        <div class="col pt-3 pt-md-0">
+            <h2>Welcome to North Texas Aikido</h2>
+            <p class="lead">
+               North Texas Aikido is a free-standing Iwama-style Aikido dojo located in Allen, Texas.
+            </p>
+        </div>
+    </div>
+</div>
+{{ end }}
