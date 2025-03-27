@@ -17,6 +17,17 @@ GOARCH="amd64"
 GOVERSION="go1.17.6"
 ```
 
+### Bootstrap
+
+If loading to rebuild from GIT, the npm modules (bootstrap) are not saved in GIT. So, do the following:
+
+```
+npm init
+npm install bootstrap --save
+npm install bootstrap-icons --save
+```
+
+
 ## Theme
 
 The site is built on a custom theme, nta.
