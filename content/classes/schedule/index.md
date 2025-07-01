@@ -30,7 +30,7 @@ schedule:
       ##### All Ages
       9 AM - 10 AM
       ##### Weapons Workshop
-      10:15 AM - 11:15 AM
+      10:15 AM - 11:15 AM  (Adults and Youths)
 
 
 ---
