@@ -27,6 +27,24 @@ dues:
     icon: '<i class="fad fa-user-graduate fa-3x"></i>'
     link: 'https://square.link/u/GPrtDycZ'
 
+  - title: Kids
+    description: Children 6 to 15 years old
+    amount: 75
+    icon: '<i class="fad fa-user fa-3x"></i>'
+    link: 'https://square.link/u/Bk0cAU6f'
+
+  - title: Parent & Child
+    description: Parent and child co-training class
+    amount: 60
+    icon: '<i class="fad fa-user-friends fa-3x"></i>'
+    link: 'https://square.link/u/GPrtDycZ'
+
+  - title: P & C Legacy
+    description: Parent and child co-training class, legacy discount
+    amount: 30
+    icon: '<i class="fad fa-user-friends fa-3x"></i>'
+    link: 'https://square.link/u/rREu6wLc'
+
 ---
 
 {{< hmod >}}

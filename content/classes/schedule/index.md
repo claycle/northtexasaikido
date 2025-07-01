@@ -17,17 +17,17 @@ menu:
 schedule:
   - day: Tuesday
     content: |
-      ##### Adults
+      ##### All Ages
       7:30 PM - 8:30 PM
 
   - day: Friday
     content: |
-      ##### Adults
+      ##### All Ages
       7:30 PM - 8:30 PM
 
   - day: Saturday
     content: |
-      ##### Adults
+      ##### All Ages
       9 AM - 10 AM
       ##### Weapons Workshop
       10:15 AM - 11:15 AM
