@@ -1,6 +1,6 @@
 ---
 comment: Included in home page if $.Param "show_pandemic"
-_build:
+build:
     list: false
     render: false
 ---

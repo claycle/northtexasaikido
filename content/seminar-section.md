@@ -1,7 +1,7 @@
 ---
 title: Spring Seminar 2025
 comment: Included in home page if $.Param "cascade.show.seminar"
-_build:
+build:
     list: false
     render: false
 ---

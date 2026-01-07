@@ -2,6 +2,17 @@
   "name": "nta-hugo",
   "version": "1.0.0",
   "description": "North Texas Aikido (northtexasaikido.com) 2.0",
+  "homepage": "https://github.com/claycle/northtexasaikido#readme",
+  "bugs": {
+    "url": "https://github.com/claycle/northtexasaikido/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claycle/northtexasaikido.git"
+  },
+  "license": "UNLICENSED",
+  "author": "Clay Luther <claycle@claycle.com> (https://claycle.com)",
+  "type": "commonjs",
   "main": "index.html",
   "scripts": {
     "server": "hugo server -D --disableFastRender",
@@ -10,18 +21,8 @@
     "clean": "bash ./clean.sh",
     "test": "echo 'This is a test!'"
   },
-  "author": "Clay Luther <claycle@claycle.com> (https://claycle.com)",
-  "license": "UNLICENSED",
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/claycle/northtexasaikido.git"
-  },
-  "bugs": {
-    "url": "https://github.com/claycle/northtexasaikido/issues"
-  },
-  "homepage": "https://github.com/claycle/northtexasaikido#readme"
+  }
 }

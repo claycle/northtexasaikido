@@ -1,6 +1,6 @@
 ---
 comment: Included in home page if $.Param "show_dojo_cho"
-_build:
+build:
     list: false
     render: false
 ---
