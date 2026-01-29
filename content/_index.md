@@ -8,7 +8,7 @@ draft: false
 showmon: true
 cascade:
   show:
-    dojocho: true
+    dojocho: false
     pandemic: false
     seminar: false
     welcome: true
