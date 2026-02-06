@@ -10,7 +10,7 @@ cascade:
   show:
     dojocho: false
     pandemic: false
-    seminar: false
+    seminar: true
     welcome: true
     special-event: false
 ---

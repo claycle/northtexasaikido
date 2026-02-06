@@ -1,24 +1,17 @@
-{{ if $.Param "cascade.show.seminar" }}
-
-    {{ $dcimg := .Resources.GetMatch "seminar-cover.{webp,jpg,png}" }}
-    {{ $dcimgsm := .Resources.GetMatch "seminar-cover-small.{webp,jpg,png}" }}
-    {{ if not $dcimg }}
-        {{ $dcimg = "https://picsum.photos/200/250"}}
-    {{ end }}
-    {{ if not $dcimgsm }}
-        {{ $dcimgsm = "https://picsum.photos/420/180"}}
-    {{ end }}
-    {{ $content := false }}
-    {{ $page := . }}
-    {{ with site.GetPage "seminar-section" }}
-    <div class="container shadow mt-4 roundoff dojocho">
-        <div class="row">
-            <div class="col">
-                <h1 class="dojocho text-center text-md-start">{{ .Title }}</h1>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <!-- commented out for temporary banner
+{{ if $.Param "cascade.show.seminar" }} {{ $dcimg := .Resources.GetMatch
+"seminar-cover.{webp,jpg,png}" }} {{ $dcimgsm := .Resources.GetMatch
+"seminar-cover-small.{webp,jpg,png}" }} {{ if not $dcimg }} {{ $dcimg =
+"https://picsum.photos/200/250"}} {{ end }} {{ if not $dcimgsm }} {{ $dcimgsm =
+"https://picsum.photos/420/180"}} {{ end }} {{ $content := false }} {{ $page :=
+. }} {{ with site.GetPage "seminar-section" }}
+<div class="container shadow mt-4 roundoff dojocho">
+  <div class="row">
+    <div class="col">
+      <h1 class="dojocho text-center text-md-start">{{ .Title }}</h1>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <!-- commented out for temporary banner
             <div class="col col-12 col-md-4 col-lg-4 order-1 order-md-2">
                 <div class="d-block d-md-none">
                     <img class="d-block w-100 roundoff img-fluid" src="{{ $dcimgsm }}" alt="Seminar">
@@ -28,15 +21,26 @@
                 </div>
             </div>
             -->
-            <div class="col order-2 order-md-1 mt-3 mt-md-0">
-                {{ .Content }}
-                <!-- temporary banner -->
-                <div style="width:100%;" class="p-4">
-                    <img src="phs2025.webp" style="display: block; width: 75%; height: auto; margin-left:auto; margin-right: auto;" class="rounded" />
-                </div>
-            </div>
-        </div>
-        <!-- commented out for solo banner
+    <div class="col order-2 order-md-1 mt-3 mt-md-0">
+      <!-- temporary banner -->
+      <div style="width: 100%" class="p-4">
+        <img
+          src="phs2026.webp"
+          style="
+            display: block;
+            width: 90%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+          "
+          class="rounded"
+        />
+      </div>
+
+      {{ .Content }}
+    </div>
+  </div>
+  <!-- commented out for solo banner
         {{ $imgs := $page.Resources.Match "seminar-image-*.{webp,jpg,png}" }}
         {{/* $imgs := $page.Resources.Match "seminar-bumper-2024-*.{webp,jpg,png}" */}}
         {{ with $imgs }}
@@ -49,10 +53,8 @@
         </div>
         {{ end }}
         -->
-        <div class="row text-small text-end mt-1">
-            <i>{{ .Lastmod.Format "Monday, January 2, 2006" }}</i>
-        </div>
-    </div>
-    {{ end }}
-    {{ partialCached "divider" . }}
-{{ end }}
+  <div class="row text-small text-end mt-1">
+    <i>{{ .Lastmod.Format "Monday, January 2, 2006" }}</i>
+  </div>
+</div>
+{{ end }} {{ partialCached "divider" . }} {{ end }}

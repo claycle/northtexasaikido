@@ -1,6 +1,5 @@
 buildDrafts = true
-minify = false
+# minify = false
 
 [params]
 debugInfo = true
-
