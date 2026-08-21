@@ -1,0 +1,15 @@
+{{ if $.Param "cascade.show.no-class-tonight" }}
+
+    {{ with site.GetPage "no-class-tonight-section" }}
+
+        <div class="container shadow mt-4 roundoff dojocho">
+            <div class="row">
+                <div class="col">
+                {{ .Content }}
+                </div>
+            </div>
+        </div>
+
+    {{ end }}
+
+{{ end }}
