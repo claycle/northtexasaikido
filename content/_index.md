@@ -13,7 +13,7 @@ cascade:
     seminar: false
     welcome: true
     special-event: false
-    no-class-tonight: false
+    no-class-tonight: true
 ---
 
 For over 30 years, North Texas Aikido has served the community with Iwama-Style Aikido in a safe, friendly atmosphere that fosters learning and development at a pace tailored to each individual student.

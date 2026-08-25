@@ -7,6 +7,4 @@ build:
 
 ## Classes Cancelled Tonight
 
-Due to extreme heat conditions, class is cancelled tonight (8/21).
-
-*Regular Saturday classes will be held tomorrow (8/22).*
+Due to extreme heat conditions, class is cancelled tonight.
