@@ -12,4 +12,20 @@
 
     {{ end }}
 
+{{ else }}
+    {{/* this section overriden by the no-class-tonight */}}
+    {{ if $.Param "cascade.show.class-tonight" }}
+        {{ with site.GetPage "class-tonight-section" }}
+
+            <div class="container shadow mt-4 roundoff dojocho text-bg-info">
+                <div class="row">
+                    <div class="col">
+                    {{ .Content }}
+                    </div>
+                </div>
+            </div>
+
+        {{ end }}
+    {{ end }}
+
 {{ end }}
