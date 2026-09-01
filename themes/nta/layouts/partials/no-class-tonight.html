@@ -1,7 +1,29 @@
+{{ $buildTimestamp := .Lastmod.Unix }} <!-- Use now.Unix for page generation time -->
+
+<script language="javascript">
+document.addEventListener("DOMContentLoaded", () => {
+    const section = document.getElementById("dynamic-section-class-tonight");
+    if (!section) return;
+
+    const generatedTimestamp = parseInt(section.dataset.timestamp, 10);
+    const currentTimestamp = Math.floor(Date.now() / 1000); // Current time in seconds
+    const twelveHoursInSeconds = 12 * 60 * 60; // 43,200 seconds
+    //const twelveHoursInSeconds = 10;
+
+    // Check if current time is within 12 hours of generation
+    if (currentTimestamp - generatedTimestamp <= twelveHoursInSeconds) {
+        section.style.display = "block";
+    } else {
+        // Explicitly remove from DOM if stale
+        section.remove();
+    }
+});
+</script>
+
+<div id="dynamic-section-class-tonight" data-timestamp="{{ $buildTimestamp }}" style="display: none;">
 {{ if $.Param "cascade.show.no-class-tonight" }}
 
     {{ with site.GetPage "no-class-tonight-section" }}
-
         <div class="container shadow mt-4 roundoff dojocho text-bg-warning">
             <div class="row">
                 <div class="col">
@@ -9,7 +31,6 @@
                 </div>
             </div>
         </div>
-
     {{ end }}
 
 {{ else }}
@@ -27,5 +48,5 @@
 
         {{ end }}
     {{ end }}
-
 {{ end }}
+</div>
