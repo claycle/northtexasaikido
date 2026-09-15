@@ -8,4 +8,4 @@ warn-color: text-bg-warning
 
 ## Classes Cancelled Tonight
 
-Due to extreme heat conditions, class is cancelled tonight.
+Due to extreme heat conditions, class is cancelled tonight. Classes will resume Friday.

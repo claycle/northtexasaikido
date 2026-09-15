@@ -13,7 +13,7 @@ cascade:
     seminar: false
     welcome: true
     special-event: false
-    no-class-tonight: false
+    no-class-tonight: true
     class-tonight: false
 ---
 
