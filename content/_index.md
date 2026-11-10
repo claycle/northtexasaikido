@@ -8,12 +8,12 @@ draft: false
 showmon: true
 cascade:
   show:
-    dojocho: false
+    dojocho: true
     pandemic: false
     seminar: false
     welcome: true
     special-event: false
-    no-class-tonight: true
+    no-class-tonight: false
     class-tonight: false
 ---
 

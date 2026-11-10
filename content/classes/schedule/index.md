@@ -18,12 +18,12 @@ schedule:
   - day: Tuesday
     content: |
       ##### All Ages
-      7:30 PM - 8:30 PM
+      8 PM - 9 PM
 
   - day: Friday
     content: |
       ##### All Ages
-      7:30 PM - 8:30 PM
+      8 PM - 9 PM
 
   - day: Saturday
     content: |
